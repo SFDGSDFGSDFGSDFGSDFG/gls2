@@ -1,0 +1,5105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xhtml="http://www.w3.org/1999/xhtml"
+     width="100%"
+     height="100%"
+     style="display:block;width:100vw;height:100vh;height:100dvh;overflow:hidden;background:#060506">
+  <title id="doc-title">Ghoulish</title>
+  <desc>Ghoulish unblocked games catalog. Open this SVG directly in a browser.</desc>
+  <xhtml:link id="top-icon" rel="icon" href="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png" />
+  <foreignObject x="0" y="0" width="100%" height="100%">
+    <xhtml:iframe
+      id="app"
+      title="Ghoulish unblocked games catalog"
+      allow="autoplay; fullscreen; gamepad *; clipboard-write; clipboard-read; encrypted-media; accelerometer; gyroscope"
+      referrerpolicy="no-referrer"
+      style="display:block;width:100%;height:100%;border:0;background:#060506"
+    ></xhtml:iframe>
+  </foreignObject>
+  <script type="text/plain" id="app-source"><![CDATA[
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ghoulish is a fast, searchable catalog of unblocked browser games from GN-Math, Lumin, and Noah's Tutoring.">
+  <meta name="theme-color" content="#060506">
+  <title>Ghoulish</title>
+
+  <link id="favicon" rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij4gIDxyZWN0IHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgcng9IjEyIiBmaWxsPSIjMGEwYTBhIi8+ICA8IS0tIGJvYXJkIGZyYW1lIC0tPiAgPHJlY3QgeD0iNyIgeT0iMTEiIHdpZHRoPSI1MCIgaGVpZ2h0PSIzOCIgcng9IjciIGZpbGw9IiNiMzAwMWIiLz4gIDxyZWN0IHg9IjEyIiB5PSIxNiIgd2lkdGg9IjQwIiBoZWlnaHQ9IjI4IiByeD0iMyIgZmlsbD0iIzBhMGEwYSIvPiAgPCEtLSBwZXJzb24gLS0+ICA8Y2lyY2xlIGN4PSIzMiIgY3k9IjI3IiByPSI2IiBmaWxsPSIjZDkwNDI5Ii8+ICA8cGF0aCBkPSJNMjAgNDQgQzIwIDM2IDI2IDM0IDMyIDM0IEMzOCAzNCA0NCAzNiA0NCA0NCBaIiBmaWxsPSIjZDkwNDI5Ii8+ICA8IS0tIEcgYmFkZ2UgLS0+ICA8Y2lyY2xlIGN4PSI0NiIgY3k9IjQ2IiByPSIxNSIgZmlsbD0iIzBhMGEwYSIvPiAgPHBhdGggZD0iTTUyLjYgNDEuNCBBOCA4IDAgMSAwIDU0IDQ2IEw0NyA0NiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmYxYTFhIiBzdHJva2Utd2lkdGg9IjQuNSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+PC9zdmc+">
+<style>
+/* ------------------------------------------------------------------
+   Ghoulish — unblocked games catalog
+   Plain CSS. Black-and-red shell with per-source themes, high-contrast,
+   responsive, no external dependencies.
+   ------------------------------------------------------------------ */
+
+:root {
+  color-scheme: dark;
+
+  --bg: #060506;
+  --bg-soft: #0b090a;
+  --panel: #110e0f;
+  --panel-2: #181315;
+  --panel-3: #221a1d;
+  --border: rgba(255, 241, 243, 0.08);
+  --border-strong: rgba(255, 241, 243, 0.16);
+
+  --text: #fff7f8;
+  --text-soft: #e5d6d9;
+  --muted: #b7a2a7;
+  --muted-2: #9f868c;
+
+  --accent: #ff3b4e;
+  --accent-hover: #ff5c6b;
+  --accent-ink: #220207;
+  --accent-rgb: 255, 59, 78;
+  --accent-deep: #b31227;
+  --accent-deep-rgb: 179, 18, 39;
+
+  --source-gn-math: #ff2f43;
+  --source-gn-math-rgb: 255, 47, 67;
+  --source-lumin: #2dd4bf;
+  --source-lumin-rgb: 45, 212, 191;
+  --source-noahs-tutoring: #ffb020;
+  --source-noahs-tutoring-rgb: 255, 176, 32;
+
+  --danger: #ff5c6b;
+
+  --radius-sm: 10px;
+  --radius: 14px;
+  --radius-lg: 20px;
+  --shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+  --max-width: 1440px;
+  --gutter: clamp(16px, 3vw, 32px);
+  --bar-height: 58px;
+
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    radial-gradient(980px 600px at 82% -12%, rgba(var(--accent-rgb), 0.14), transparent 62%),
+    radial-gradient(820px 620px at -8% 4%, rgba(var(--accent-deep-rgb), 0.17), transparent 60%),
+    radial-gradient(700px 420px at 50% 108%, rgba(var(--accent-rgb), 0.055), transparent 70%),
+    var(--bg);
+  line-height: 1.5;
+}
+
+body[data-theme="gn-math"] {
+  --accent: var(--source-gn-math);
+  --accent-hover: #ff5566;
+  --accent-ink: #220206;
+  --accent-rgb: var(--source-gn-math-rgb);
+  --accent-deep: #a80e22;
+  --accent-deep-rgb: 168, 14, 34;
+}
+
+body[data-theme="lumin"] {
+  --accent: var(--source-lumin);
+  --accent-hover: #5eead4;
+  --accent-ink: #03211d;
+  --accent-rgb: var(--source-lumin-rgb);
+  --accent-deep: #0f766e;
+  --accent-deep-rgb: 15, 118, 110;
+}
+
+body[data-theme="noahs-tutoring"] {
+  --accent: var(--source-noahs-tutoring);
+  --accent-hover: #ffc14d;
+  --accent-ink: #241400;
+  --accent-rgb: var(--source-noahs-tutoring-rgb);
+  --accent-deep: #b45309;
+  --accent-deep-rgb: 180, 83, 9;
+}
+
+body.player-open,
+body.settings-open {
+  overflow: hidden;
+}
+
+/* ------------------------------------------------ Background presets */
+
+body[data-bg="grid"] {
+  background-color: #040506;
+  background-image:
+    radial-gradient(900px 560px at 76% -10%, rgba(var(--accent-rgb), 0.2), transparent 64%),
+    linear-gradient(180deg, rgba(4, 5, 6, 0.05), rgba(4, 5, 6, 0.88) 72%),
+    linear-gradient(rgba(255, 247, 248, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 247, 248, 0.05) 1px, transparent 1px);
+  background-size: auto, auto, 48px 48px, 48px 48px;
+  background-attachment: fixed;
+  background-repeat: no-repeat, no-repeat, repeat, repeat;
+}
+
+body[data-bg="fog"] {
+  background-color: #040506;
+  background-image:
+    radial-gradient(900px 620px at 12% 8%, rgba(var(--accent-rgb), 0.16), transparent 62%),
+    radial-gradient(800px 620px at 92% 28%, rgba(103, 136, 166, 0.14), transparent 65%),
+    radial-gradient(1000px 700px at 50% 105%, rgba(var(--accent-deep-rgb), 0.22), transparent 68%),
+    linear-gradient(155deg, #0a0c10 0%, #050607 48%, #080509 100%);
+  background-attachment: fixed;
+}
+
+body[data-bg="midnight"] {
+  background-color: #04040b;
+  background-image:
+    radial-gradient(950px 580px at 78% -12%, rgba(92, 86, 214, 0.17), transparent 65%),
+    radial-gradient(1.2px 1.2px at 18% 26%, rgba(255, 255, 255, 0.55), transparent),
+    radial-gradient(1px 1px at 72% 64%, rgba(255, 238, 240, 0.45), transparent),
+    radial-gradient(1.4px 1.4px at 42% 84%, rgba(174, 190, 255, 0.45), transparent),
+    linear-gradient(165deg, #090d20 0%, #04050d 55%, #080409 100%);
+  background-size: auto, 220px 180px, 310px 260px, 170px 230px, auto;
+  background-repeat: no-repeat, repeat, repeat, repeat, no-repeat;
+  background-attachment: fixed;
+}
+
+/* A custom image keeps a dark wash and accent glow on top for contrast. */
+body.has-bg-image {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(900px 560px at 82% -10%, rgba(var(--accent-rgb), 0.16), transparent 64%),
+    linear-gradient(180deg, rgba(6, 5, 6, 0.74) 0%, rgba(6, 5, 6, 0.86) 48%, rgba(6, 5, 6, 0.93) 100%),
+    var(--bg-image);
+  background-size: auto, auto, cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 300;
+  padding: 10px 14px;
+  border-radius: 9px;
+  color: var(--accent-ink);
+  background: var(--accent);
+  font-weight: 700;
+  text-decoration: none;
+  transform: translateY(-160%);
+  transition: transform 0.18s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* ------------------------------------------------------------------ Header */
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--border);
+  background: rgba(6, 5, 6, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  max-width: var(--max-width);
+  min-height: 76px;
+  margin: 0 auto;
+  padding: 12px var(--gutter);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  flex: 0 0 auto;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: block;
+  width: 38px;
+  height: 38px;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #0a0a0a;
+  box-shadow: 0 0 0 1px rgba(var(--accent-rgb), 0.28),
+    0 8px 30px rgba(var(--accent-rgb), 0.22);
+}
+
+.brand-mark svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.brand-mark .brand-frame {
+  fill: var(--accent-deep);
+  transition: fill 180ms ease;
+}
+
+.brand-mark .brand-person {
+  fill: var(--accent);
+  transition: fill 180ms ease;
+}
+
+.brand-mark .brand-letter {
+  stroke: var(--accent-hover);
+  transition: stroke 180ms ease;
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+
+.brand-name {
+  font-size: 19px;
+  font-weight: 850;
+  letter-spacing: 0.115em;
+  text-transform: uppercase;
+}
+
+.brand-tag {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.search-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: min(440px, 100%);
+}
+
+.search-icon {
+  position: absolute;
+  left: 14px;
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: var(--muted);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  pointer-events: none;
+}
+
+#search {
+  width: 100%;
+  height: 44px;
+  padding: 0 52px 0 42px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  outline: none;
+  background: var(--panel);
+  color: var(--text);
+  font-size: 14px;
+  transition: border-color 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+}
+
+#search::placeholder {
+  color: var(--muted);
+}
+
+#search:hover {
+  border-color: var(--border-strong);
+}
+
+#search:focus {
+  border-color: rgba(var(--accent-rgb), 0.65);
+  background: var(--bg-soft);
+  box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.15);
+}
+
+/* Hide the default WebKit search cancel button in favour of our own styling. */
+#search::-webkit-search-cancel-button {
+  appearance: none;
+}
+
+.search-hint {
+  position: absolute;
+  right: 11px;
+  display: grid;
+  place-items: center;
+  min-width: 23px;
+  height: 23px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--panel-2);
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex: 0 1 500px;
+  min-width: 0;
+}
+
+.topbar-actions .search-field {
+  flex: 1 1 auto;
+  max-width: 440px;
+}
+
+.settings-button {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--panel);
+  color: var(--muted);
+  transition: border-color 0.16s ease, background 0.16s ease, color 0.16s ease;
+}
+
+.settings-button:hover {
+  border-color: var(--border-strong);
+  background: var(--panel-2);
+  color: var(--text);
+}
+
+.settings-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.settings-button svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* ------------------------------------------------------------------ Layout */
+
+.page {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter) 72px;
+}
+
+.intro {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 36px;
+  padding: clamp(38px, 6vw, 72px) 0 34px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(var(--accent-rgb), 0.14);
+}
+
+.intro h1 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(36px, 5.4vw, 62px);
+  font-weight: 820;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+
+.intro h1 span {
+  color: var(--accent);
+  text-shadow: 0 0 38px rgba(var(--accent-rgb), 0.24);
+}
+
+.lede {
+  max-width: 620px;
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: clamp(14px, 1.5vw, 16px);
+  line-height: 1.65;
+}
+
+.stats {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--border);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  min-width: 128px;
+  padding: 16px 20px;
+  background: rgba(18, 14, 16, 0.9);
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-label {
+  margin-top: 3px;
+  color: var(--muted-2);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ---------------------------------------------------------------- Featured */
+
+.featured {
+  padding: 0 0 28px;
+}
+
+.featured-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 14px;
+}
+
+.featured-title {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.featured-title::before {
+  content: '';
+  width: 4px;
+  height: 17px;
+  border-radius: 2px;
+  background: var(--accent);
+  box-shadow: 0 0 14px rgba(var(--accent-rgb), 0.55);
+}
+
+.featured-note {
+  margin: 0;
+  color: var(--muted-2);
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.featured-card .card-art {
+  aspect-ratio: 16 / 9;
+}
+
+.featured-card .card-title {
+  font-size: 14px;
+}
+
+.featured-card.is-hero {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.featured-card.is-hero .card-open {
+  flex: 1;
+}
+
+.featured-card.is-hero .card-art {
+  flex: 1;
+  min-height: 270px;
+  aspect-ratio: auto;
+}
+
+.featured-card.is-hero .card-title {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+/* Skate 3's box art is portrait, so show it whole over a blurred fill. */
+.featured-card.is-hero .card-art.is-portrait {
+  background-color: #080708;
+}
+
+.featured-card.is-hero .card-art.is-portrait::before {
+  content: '';
+  position: absolute;
+  inset: -30px;
+  z-index: -1;
+  background:
+    linear-gradient(rgba(6, 5, 6, 0.12), rgba(6, 5, 6, 0.62)),
+    var(--hero-cover) center / cover no-repeat;
+  filter: blur(20px) brightness(0.62) saturate(1.15);
+  transform: scale(1.05);
+  pointer-events: none;
+}
+
+.featured-card.is-hero .card-art.is-portrait img {
+  object-fit: contain;
+  border-radius: 4px;
+  filter: drop-shadow(0 20px 44px rgba(0, 0, 0, 0.6));
+}
+
+/* --------------------------------------------------------------- Catalog bar */
+
+.catalog-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px 0 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.filters::-webkit-scrollbar {
+  display: none;
+}
+
+.filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  flex: 0 0 auto;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 650;
+  white-space: nowrap;
+  transition: color 0.16s ease, background 0.16s ease, border-color 0.16s ease;
+}
+
+.filter:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.filter.is-active {
+  border-color: var(--border-strong);
+  background: var(--panel-2);
+  color: var(--text);
+}
+
+.filter-count {
+  min-width: 18px;
+  padding: 1px 5px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.filter.is-active .filter-count {
+  background: rgba(var(--accent-rgb), 0.16);
+  color: var(--accent);
+}
+
+/* The All view uses the global red theme; each source pill uses its own. */
+.filter[data-source="all"].is-active {
+  border-color: rgba(var(--accent-rgb), 0.42);
+  background: rgba(var(--accent-rgb), 0.09);
+}
+
+.filter[data-source="all"].is-active .filter-count {
+  background: rgba(var(--accent-rgb), 0.16);
+  color: var(--accent);
+}
+
+.filter[data-source="gn-math"].is-active {
+  border-color: rgba(var(--source-gn-math-rgb), 0.42);
+  background: rgba(var(--source-gn-math-rgb), 0.09);
+}
+
+.filter[data-source="gn-math"].is-active .filter-count {
+  background: rgba(var(--source-gn-math-rgb), 0.16);
+  color: var(--source-gn-math);
+}
+
+.filter[data-source="lumin"].is-active {
+  border-color: rgba(var(--source-lumin-rgb), 0.42);
+  background: rgba(var(--source-lumin-rgb), 0.09);
+}
+
+.filter[data-source="lumin"].is-active .filter-count {
+  background: rgba(var(--source-lumin-rgb), 0.16);
+  color: var(--source-lumin);
+}
+
+.filter[data-source="noahs-tutoring"].is-active {
+  border-color: rgba(var(--source-noahs-tutoring-rgb), 0.42);
+  background: rgba(var(--source-noahs-tutoring-rgb), 0.09);
+}
+
+.filter[data-source="noahs-tutoring"].is-active .filter-count {
+  background: rgba(var(--source-noahs-tutoring-rgb), 0.16);
+  color: var(--source-noahs-tutoring);
+}
+
+.source-dot {
+  width: 6px;
+  height: 6px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--muted);
+}
+
+.source-dot.source-gn-math {
+  background: var(--source-gn-math);
+}
+
+.source-dot.source-lumin {
+  background: var(--source-lumin);
+}
+
+.source-dot.source-noahs-tutoring {
+  background: var(--source-noahs-tutoring);
+}
+
+.result-count {
+  flex: 0 0 auto;
+  margin: 0;
+  color: var(--muted-2);
+  font-size: 12px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ------------------------------------------------------------------- Notice */
+
+.notice {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  padding: 12px 14px;
+  border: 1px solid rgba(var(--accent-rgb), 0.28);
+  border-radius: 12px;
+  background: rgba(var(--accent-rgb), 0.07);
+}
+
+.notice-mark {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: rgba(var(--accent-rgb), 0.16);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.notice-text {
+  flex: 1;
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.notice-text strong {
+  color: var(--text);
+}
+
+/* -------------------------------------------------------------------- Grid */
+
+.catalog {
+  padding-top: 24px;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(168px, 1fr));
+  gap: 22px 16px;
+}
+
+.game-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.card-open {
+  /* Keep programmatic scrolling/focus from landing under the sticky header. */
+  scroll-margin-top: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+}
+
+/* Per-source accent: cards keep their library's colour even when the page
+   shell is themed for a different source. */
+.game-card[data-source="gn-math"] {
+  --card-rgb: var(--source-gn-math-rgb);
+}
+
+.game-card[data-source="lumin"] {
+  --card-rgb: var(--source-lumin-rgb);
+}
+
+.game-card[data-source="noahs-tutoring"] {
+  --card-rgb: var(--source-noahs-tutoring-rgb);
+}
+
+.game-card[data-source] .card-art {
+  border-color: rgba(var(--card-rgb, var(--accent-rgb)), 0.16);
+}
+
+.card-art {
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(145deg,
+      hsl(var(--hue, 24) 34% 16%) 0%,
+      hsl(calc(var(--hue, 24) - 10) 30% 6%) 100%);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  isolation: isolate;
+}
+
+.card-art::after {
+  /* Thumbnail fallback: the game's initials, shown if the image fails. */
+  content: attr(data-initial);
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: rgba(255, 241, 243, 0.62);
+  font-size: clamp(22px, 3.2vw, 34px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: -1;
+}
+
+.card-art.is-fallback::after {
+  opacity: 1;
+}
+
+.card-art img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease, opacity 0.25s ease;
+}
+
+.card-art.is-fallback img {
+  display: none;
+}
+
+.game-card:hover .card-art {
+  border-color: rgba(var(--card-rgb, var(--accent-rgb)), 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.42),
+    0 0 24px rgba(var(--card-rgb, var(--accent-rgb)), 0.12);
+}
+
+.game-card:hover .card-art img {
+  transform: scale(1.045);
+}
+
+.card-open:focus-visible {
+  outline: none;
+}
+
+.card-open:focus-visible .card-art {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.card-source {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  max-width: calc(100% - 46px);
+  overflow: hidden;
+  padding: 4px 7px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  background: rgba(6, 5, 6, 0.78);
+  color: var(--text-soft);
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: 0.055em;
+  line-height: 1;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.card-source .source-dot {
+  width: 5px;
+  height: 5px;
+}
+
+.card-source[data-source="gn-math"] {
+  border-color: rgba(var(--source-gn-math-rgb), 0.28);
+}
+
+.card-source[data-source="lumin"] {
+  border-color: rgba(var(--source-lumin-rgb), 0.3);
+}
+
+.card-source[data-source="noahs-tutoring"] {
+  border-color: rgba(var(--source-noahs-tutoring-rgb), 0.3);
+}
+
+.card-source.card-author {
+  border-color: rgba(255, 255, 255, 0.24);
+  color: var(--text);
+  letter-spacing: 0.09em;
+}
+
+.card-download {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 7px;
+  background: rgba(6, 5, 6, 0.8);
+  color: var(--text-soft);
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+}
+
+.card-download:hover {
+  border-color: rgba(var(--card-rgb, var(--accent-rgb)), 0.55);
+  background: rgba(var(--card-rgb, var(--accent-rgb)), 0.2);
+  color: var(--text);
+}
+
+.card-download:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.card-download:disabled {
+  cursor: wait;
+}
+
+.card-download svg {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.card-download.is-busy svg {
+  display: none;
+}
+
+.card-download.is-busy::after {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-top-color: var(--text);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.card-title {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--text-soft);
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.35;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  transition: color 0.16s ease;
+}
+
+.game-card:hover .card-title {
+  color: var(--text);
+}
+
+/* ---------------------------------------------------------------- Skeletons */
+
+.skeleton-card {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.skeleton-art {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+.skeleton-line {
+  position: relative;
+  overflow: hidden;
+  width: 74%;
+  height: 12px;
+  margin-top: 2px;
+  border-radius: 5px;
+  background: var(--panel);
+}
+
+.skeleton-art::after,
+.skeleton-line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, transparent 20%, rgba(255, 255, 255, 0.055) 55%, transparent 90%);
+  transform: translateX(-100%);
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* --------------------------------------------------------------- State panels */
+
+.state-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 580px;
+  margin: 40px auto 0;
+  padding: clamp(28px, 5vw, 48px) 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(24, 19, 21, 0.78), rgba(11, 9, 10, 0.78));
+  text-align: center;
+}
+
+.state-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 18px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--panel-2);
+  color: var(--muted);
+  font-size: 21px;
+}
+
+.state-panel h2 {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 750;
+  letter-spacing: -0.025em;
+}
+
+.state-panel p {
+  max-width: 460px;
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.65;
+}
+
+.state-panel .btn {
+  margin-top: 20px;
+}
+
+.state-panel .state-hint {
+  margin-top: 22px;
+  color: var(--muted-2);
+  font-size: 11.5px;
+}
+
+.state-empty {
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+
+/* ------------------------------------------------------------------- Buttons */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease, transform 0.16s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+
+.btn-quiet {
+  border-color: var(--border);
+  background: var(--panel-2);
+  color: var(--text-soft);
+}
+
+.btn-quiet:hover {
+  border-color: var(--border-strong);
+  background: var(--panel-3);
+  color: var(--text);
+}
+
+.btn-small {
+  min-height: 32px;
+  padding: 0 12px;
+  font-size: 12px;
+}
+
+.btn-icon {
+  width: 40px;
+  min-height: 40px;
+  padding: 0;
+}
+
+.btn-icon[aria-pressed="true"] {
+  border-color: rgba(var(--player-accent-rgb), 0.45);
+  background: rgba(var(--player-accent-rgb), 0.16);
+  color: var(--text);
+}
+
+.btn svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.load-more-wrap {
+  display: flex;
+  justify-content: center;
+  padding-top: 34px;
+}
+
+.load-more {
+  min-width: 190px;
+  min-height: 42px;
+}
+
+/* -------------------------------------------------------------------- Footer */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 24px var(--gutter) 34px;
+  border-top: 1px solid var(--border);
+  color: var(--muted-2);
+  font-size: 11.5px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer-muted {
+  text-align: right;
+}
+
+/* -------------------------------------------------------------------- Player */
+
+.player {
+  --player-accent: var(--accent);
+  --player-accent-rgb: var(--accent-rgb);
+  --player-accent-ink: var(--accent-ink);
+
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  animation: player-in 0.16s ease-out;
+}
+
+.player[data-source="gn-math"] {
+  --player-accent: var(--source-gn-math);
+  --player-accent-rgb: var(--source-gn-math-rgb);
+  --player-accent-ink: #220206;
+}
+
+.player[data-source="lumin"] {
+  --player-accent: var(--source-lumin);
+  --player-accent-rgb: var(--source-lumin-rgb);
+  --player-accent-ink: #03201d;
+}
+
+.player[data-source="noahs-tutoring"] {
+  --player-accent: var(--source-noahs-tutoring);
+  --player-accent-rgb: var(--source-noahs-tutoring-rgb);
+  --player-accent-ink: #221400;
+}
+
+.player:fullscreen {
+  width: 100%;
+  height: 100%;
+  inset: 0;
+}
+
+/* True fullscreen is the game and nothing else. Escape restores the toolbar. */
+.player:fullscreen .player-bar {
+  display: none;
+}
+
+/* The SVG wrapper expands the whole app when native iframe fullscreen is
+   unavailable (for example when the file is opened from disk). */
+body.is-fullscreen .player-bar {
+  display: none;
+}
+
+.player::backdrop {
+  background: #000;
+}
+
+#fullscreen-game .icon-compress {
+  display: none;
+}
+
+#fullscreen-game[aria-pressed="true"] .icon-expand {
+  display: none;
+}
+
+#fullscreen-game[aria-pressed="true"] .icon-compress {
+  display: block;
+}
+
+@keyframes player-in {
+  from {
+    opacity: 0;
+  }
+}
+
+.player-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: var(--bar-height);
+  padding: 8px 12px 8px 16px;
+  border-bottom: 1px solid rgba(var(--player-accent-rgb), 0.16);
+  background: #0a0809;
+}
+
+.player-identity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.player-identity > .source-dot {
+  width: 8px;
+  height: 8px;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.035);
+}
+
+.player-heading {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.2;
+}
+
+.player-title {
+  overflow: hidden;
+  max-width: min(52vw, 720px);
+  margin: 0;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.player-source {
+  margin-top: 3px;
+  color: var(--player-accent);
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.player-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.btn-reload {
+  min-height: 36px;
+  background: transparent;
+}
+
+.btn-close {
+  min-height: 36px;
+  border-color: rgba(var(--player-accent-rgb), 0.45);
+  background: var(--player-accent);
+  color: var(--player-accent-ink);
+}
+
+.btn-close:hover {
+  filter: brightness(1.08);
+}
+
+.player-stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  background: #000;
+}
+
+#game-frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #000;
+}
+
+.frame-status {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: #000;
+}
+
+.status-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 460px;
+  text-align: center;
+}
+
+.status-card p {
+  margin: 16px 0 0;
+  color: var(--text-soft);
+  font-size: 14px;
+}
+
+.status-card .status-hint {
+  margin-top: 7px;
+  color: var(--muted-2);
+  font-size: 12px;
+}
+
+.status-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 9px;
+  margin-top: 20px;
+}
+
+.spinner {
+  width: 30px;
+  height: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-top-color: var(--player-accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.noscript {
+  position: fixed;
+  inset: auto 16px 16px;
+  z-index: 400;
+  padding: 14px 18px;
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  background: var(--panel-3);
+  color: var(--text);
+  font-size: 13px;
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  z-index: 500;
+  max-width: min(520px, calc(100vw - 32px));
+  padding: 10px 15px;
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  background: var(--panel-3);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  font-size: 12.5px;
+  line-height: 1.45;
+  text-align: center;
+  transform: translateX(-50%);
+  animation: toast-in 0.18s ease-out;
+}
+
+.toast[data-tone="error"] {
+  border-color: rgba(255, 92, 107, 0.5);
+  color: #ffc7cd;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 8px);
+  }
+}
+
+/* ---------------------------------------------------- Custom accent + settings */
+
+/* A custom accent from Settings overrides every per-source theme. */
+body.theme-locked .filter[data-source].is-active {
+  border-color: rgba(var(--accent-rgb), 0.42);
+  background: rgba(var(--accent-rgb), 0.09);
+}
+
+body.theme-locked .filter[data-source].is-active .filter-count {
+  background: rgba(var(--accent-rgb), 0.16);
+  color: var(--accent);
+}
+
+body.theme-locked .player[data-source] {
+  --player-accent: var(--accent);
+  --player-accent-rgb: var(--accent-rgb);
+  --player-accent-ink: var(--accent-ink);
+}
+
+.settings {
+  position: fixed;
+  inset: 0;
+  z-index: 320;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.settings-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.settings-panel {
+  position: relative;
+  z-index: 1;
+  width: min(480px, 100%);
+  max-height: min(92vh, 780px);
+  overflow-y: auto;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(520px 280px at 100% -10%, rgba(var(--accent-rgb), 0.12), transparent 65%),
+    var(--panel);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.6);
+  animation: settings-in 0.18s ease-out;
+}
+
+@keyframes settings-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+  }
+}
+
+.settings-head {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 20px 16px;
+  border-bottom: 1px solid var(--border);
+  background: var(--panel);
+}
+
+.settings-kicker {
+  margin: 0;
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+#settings-title {
+  margin: 5px 0 0;
+  font-size: 22px;
+  font-weight: 820;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.settings-close {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel-2);
+  color: var(--muted);
+}
+
+.settings-close:hover {
+  border-color: var(--border-strong);
+  background: var(--panel-3);
+  color: var(--text);
+}
+
+.settings-close svg {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.settings-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px 20px 20px;
+}
+
+.settings-group {
+  padding: 15px;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.settings-group h3 {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.settings-help {
+  margin: 6px 0 12px;
+  color: var(--muted-2);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.cloak-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.cloak-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  padding: 9px 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel-2);
+  color: var(--text-soft);
+  font-size: 12px;
+  font-weight: 650;
+  text-align: left;
+  transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+}
+
+.cloak-option:hover {
+  border-color: var(--border-strong);
+  background: var(--panel-3);
+  color: var(--text);
+}
+
+.cloak-option.is-active {
+  border-color: rgba(var(--accent-rgb), 0.55);
+  background: rgba(var(--accent-rgb), 0.11);
+  color: var(--text);
+}
+
+.cloak-option img {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  border-radius: 3px;
+}
+
+.cloak-off {
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  border: 1px solid var(--border-strong);
+  border-radius: 3px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1;
+}
+
+.color-row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+}
+
+.color-control {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 5px 11px 5px 5px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel-2);
+  cursor: pointer;
+}
+
+.color-control:hover {
+  border-color: var(--border-strong);
+}
+
+.color-control input[type="color"] {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.color-control input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.color-control input[type="color"]::-webkit-color-swatch {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 6px;
+}
+
+.color-value {
+  color: var(--text-soft);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11.5px;
+  letter-spacing: 0.03em;
+}
+
+.settings-note {
+  margin: 10px 0 0;
+  color: var(--muted-2);
+  font-size: 11.5px;
+  line-height: 1.5;
+}
+
+.bg-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.bg-option {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-width: 0;
+  padding: 7px 9px 7px 7px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--panel-2);
+  color: var(--text-soft);
+  font-size: 12px;
+  font-weight: 650;
+  text-align: left;
+  transition: background 0.16s ease, border-color 0.16s ease, color 0.16s ease;
+}
+
+.bg-option:hover {
+  border-color: var(--border-strong);
+  background: var(--panel-3);
+  color: var(--text);
+}
+
+.bg-option:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.bg-option.is-active {
+  border-color: rgba(var(--accent-rgb), 0.55);
+  background: rgba(var(--accent-rgb), 0.11);
+  color: var(--text);
+}
+
+.bg-swatch {
+  width: 42px;
+  height: 30px;
+  flex: 0 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  background-color: #060506;
+  background-repeat: no-repeat;
+}
+
+.bg-swatch-embers {
+  background-image:
+    radial-gradient(28px 22px at 78% 0%, rgba(var(--accent-rgb), 0.78), transparent 70%),
+    radial-gradient(24px 20px at 10% 72%, rgba(var(--accent-deep-rgb), 0.9), transparent 70%);
+}
+
+.bg-swatch-grid {
+  background-image:
+    linear-gradient(rgba(var(--accent-rgb), 0.28) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--accent-rgb), 0.28) 1px, transparent 1px),
+    radial-gradient(30px 18px at 50% 100%, rgba(var(--accent-rgb), 0.55), transparent 70%);
+  background-size: 8px 8px, 8px 8px, auto;
+}
+
+.bg-swatch-fog {
+  background-image:
+    radial-gradient(26px 20px at 26% 22%, rgba(var(--accent-rgb), 0.72), transparent 70%),
+    radial-gradient(24px 18px at 80% 80%, rgba(103, 136, 166, 0.7), transparent 70%),
+    linear-gradient(155deg, #0a0c10, #050607);
+}
+
+.bg-swatch-midnight {
+  background-image:
+    radial-gradient(1px 1px at 22% 30%, #fff, transparent),
+    radial-gradient(1px 1px at 68% 62%, rgba(255, 238, 240, 0.8), transparent),
+    radial-gradient(1px 1px at 38% 82%, rgba(174, 190, 255, 0.8), transparent),
+    radial-gradient(22px 18px at 82% 0%, rgba(92, 86, 214, 0.5), transparent 70%),
+    linear-gradient(165deg, #090d20, #04050d);
+}
+
+.bg-image-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 13px;
+}
+
+.bg-image-label {
+  color: var(--text-soft);
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+}
+
+.bg-image-field input {
+  width: 100%;
+  min-height: 38px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  background: rgba(0, 0, 0, 0.26);
+  color: var(--text);
+  font-size: 12px;
+}
+
+.bg-image-field input::placeholder {
+  color: var(--muted-2);
+}
+
+.bg-image-field input:focus {
+  outline: none;
+  border-color: rgba(var(--accent-rgb), 0.6);
+  box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.12);
+}
+
+.bg-image-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.settings-wide {
+  width: 100%;
+}
+
+.settings-status {
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 92, 107, 0.4);
+  border-radius: 10px;
+  background: rgba(255, 92, 107, 0.08);
+  color: var(--danger);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.settings-footer {
+  display: flex;
+  padding-top: 2px;
+}
+
+.settings-github {
+  width: 100%;
+  min-height: 42px;
+}
+
+.settings-github svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+  stroke: none;
+}
+
+/* ------------------------------------------------------------------ Responsive */
+
+@media (max-width: 900px) {
+  .intro {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .stats {
+    width: 100%;
+  }
+
+  .stat {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .featured-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .featured-card.is-hero {
+    grid-row: auto;
+  }
+
+  .featured-card.is-hero .card-open {
+    flex: none;
+  }
+
+  .featured-card.is-hero .card-art {
+    flex: none;
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+
+  .featured-card.is-hero .card-art.is-portrait {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 680px) {
+  .game-card,
+  .card-open {
+    scroll-margin-top: 132px;
+  }
+
+  .card-download {
+    top: 6px;
+    right: 6px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .filters {
+    /* Wrap instead of hiding the newer sources off the right edge. */
+    width: 100%;
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+
+  :root {
+    --gutter: 16px;
+    --bar-height: 54px;
+  }
+
+  .topbar-inner {
+    flex-wrap: wrap;
+    gap: 12px;
+    min-height: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+
+  .brand-name {
+    font-size: 17px;
+  }
+
+  .brand-tag {
+    font-size: 9px;
+  }
+
+  .topbar-actions {
+    order: 2;
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .search-field {
+    order: 0;
+    width: auto;
+    flex: 1 1 auto;
+    max-width: none;
+  }
+
+  .settings-button {
+    width: 42px;
+    height: 42px;
+  }
+
+  #search {
+    height: 42px;
+  }
+
+  .search-hint {
+    display: none;
+  }
+
+  #search {
+    padding-right: 14px;
+  }
+
+  .intro {
+    padding-top: 32px;
+    padding-bottom: 26px;
+  }
+
+  .intro h1 {
+    font-size: clamp(34px, 10vw, 44px);
+  }
+
+  .lede {
+    margin-top: 16px;
+  }
+
+  .stats {
+    display: none;
+  }
+
+  .featured {
+    padding-bottom: 22px;
+  }
+
+  .featured-head {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 12px;
+  }
+
+  .featured-grid {
+    gap: 16px 12px;
+  }
+
+  .featured-card.is-hero .card-title {
+    font-size: 15px;
+  }
+
+  .catalog-bar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 16px;
+  }
+
+  .result-count {
+    order: -1;
+    font-size: 11px;
+  }
+
+  .game-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 18px 12px;
+  }
+
+  .card-title {
+    font-size: 12.5px;
+  }
+
+  .card-source {
+    top: 6px;
+    left: 6px;
+    padding: 3px 6px;
+    font-size: 8px;
+  }
+
+  .notice {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .notice-text {
+    flex-basis: calc(100% - 38px);
+  }
+
+  .notice .btn {
+    margin-left: 34px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    padding-bottom: 28px;
+  }
+
+  .footer-muted {
+    text-align: left;
+  }
+
+  .player-bar {
+    gap: 10px;
+    padding-left: 12px;
+  }
+
+  .player-title {
+    max-width: 42vw;
+    font-size: 13px;
+  }
+
+  .player-source {
+    font-size: 9px;
+  }
+
+  .btn-reload,
+  .btn-close {
+    min-height: 34px;
+    padding: 0 11px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 560px) {
+  .player-actions {
+    gap: 6px;
+  }
+
+  .player-actions .btn {
+    width: 36px;
+    min-height: 36px;
+    padding: 0;
+  }
+
+  .btn-reload span,
+  .btn-close span {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .game-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .player-bar {
+    gap: 6px;
+    padding: 6px 8px 6px 10px;
+  }
+
+  .player-title {
+    max-width: 32vw;
+  }
+
+  .player-actions .btn {
+    width: 34px;
+    min-height: 34px;
+  }
+
+  .btn-reload,
+  .btn-close {
+    min-height: 34px;
+    padding: 0 9px;
+    font-size: 11px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+
+<!--
+  Source for the portable SVG shell. build-svg.py embeds this same script,
+  and the Download SVG button reads it when rebuilding the SVG in the browser
+  (for example when index.html is opened directly from disk).
+-->
+<script type="text/plain" id="portable-wrapper">
+(() => {
+  'use strict';
+
+  const iframe = document.getElementById('app');
+  const source = document.getElementById('app-source');
+  const titleEl = document.getElementById('doc-title');
+  const iconEl = document.getElementById('top-icon');
+  const DEFAULT_TITLE = 'Ghoulish';
+  const DEFAULT_ICON = iconEl.getAttribute('href') || '';
+
+  let lastTitle = '';
+  let lastIcon = '';
+
+  function sync() {
+    let doc = null;
+    try {
+      doc = iframe.contentDocument;
+    } catch {
+      return;
+    }
+    if (!doc) return;
+
+    const nextTitle = doc.title || DEFAULT_TITLE;
+    if (nextTitle !== lastTitle) {
+      lastTitle = nextTitle;
+      titleEl.textContent = nextTitle;
+    }
+
+    const innerIcon = doc.getElementById('favicon');
+    const nextIcon = innerIcon && innerIcon.getAttribute('href');
+    if (nextIcon && nextIcon !== lastIcon) {
+      lastIcon = nextIcon;
+      iconEl.setAttribute('href', nextIcon);
+    }
+  }
+
+  // Settings asks the outer document for its own source, so saving the SVG
+  // produces the complete portable site instead of rebuilding it in the app.
+  window.__GHOULISH_EXPORT_SVG__ = () => {
+    const clone = document.documentElement.cloneNode(true);
+    const frameClone = clone.querySelector('#app');
+    if (frameClone) {
+      frameClone.removeAttribute('srcdoc');
+      frameClone.removeAttribute('src');
+    }
+
+    const cloneTitle = clone.querySelector('#doc-title');
+    if (cloneTitle) cloneTitle.textContent = DEFAULT_TITLE;
+
+    const cloneIcon = clone.querySelector('#top-icon');
+    if (cloneIcon && DEFAULT_ICON) cloneIcon.setAttribute('href', DEFAULT_ICON);
+
+    const xml = new XMLSerializer().serializeToString(clone);
+    return `<?xml version="1.0" encoding="UTF-8"?>\n${xml}`;
+  };
+
+  // Opened from disk, browsers disable the Fullscreen API in the embedded
+  // document. Let the app ask this top-level SVG document for fullscreen
+  // instead; it has the same visual result and keeps Escape working.
+  window.__GHOULISH_TOP_FULLSCREEN__ = {
+    get enabled() {
+      return Boolean(document.fullscreenEnabled);
+    },
+    isActive() {
+      return Boolean(document.fullscreenElement);
+    },
+    enter() {
+      const root = document.documentElement;
+      if (!root || typeof root.requestFullscreen !== 'function') {
+        return Promise.reject(new Error('Fullscreen is unavailable'));
+      }
+      return root.requestFullscreen();
+    },
+    exit() {
+      if (!document.fullscreenElement) return Promise.resolve();
+      return document.exitFullscreen();
+    },
+  };
+
+  function notifyFullscreen() {
+    sync();
+    try {
+      const doc = iframe.contentDocument;
+      if (doc) {
+        doc.dispatchEvent(new doc.defaultView.Event('ghoulish:top-fullscreen-change'));
+      }
+    } catch {
+      // The app may still be loading.
+    }
+  }
+
+  let observer = null;
+
+  function observeApp() {
+    try {
+      const doc = iframe.contentDocument;
+      if (!doc || !doc.head) return;
+      if (observer) observer.disconnect();
+      observer = new MutationObserver(sync);
+      observer.observe(doc.head, {
+        childList: true,
+        subtree: true,
+        characterData: true,
+        attributes: true,
+        attributeFilter: ['href'],
+      });
+      sync();
+    } catch {
+      // Cross-origin embeds fall back to the interval below.
+    }
+  }
+
+  document.addEventListener('fullscreenchange', notifyFullscreen);
+  iframe.addEventListener('load', observeApp);
+  iframe.srcdoc = source.textContent;
+  setInterval(sync, 1000);
+})();
+</script>
+</head>
+<body data-theme="all">
+  <a class="skip-link" href="#catalog">Skip to catalog</a>
+
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand" href="#" aria-label="Ghoulish home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" width="64" height="64" focusable="false">
+            <rect width="64" height="64" rx="12" fill="#0a0a0a"></rect>
+            <rect class="brand-frame" x="7" y="11" width="50" height="38" rx="7"></rect>
+            <rect x="12" y="16" width="40" height="28" rx="3" fill="#0a0a0a"></rect>
+            <circle class="brand-person" cx="32" cy="27" r="6"></circle>
+            <path class="brand-person" d="M20 44 C20 36 26 34 32 34 C38 34 44 36 44 44 Z"></path>
+            <circle cx="46" cy="46" r="15" fill="#0a0a0a"></circle>
+            <path class="brand-letter" d="M52.6 41.4 A8 8 0 1 0 54 46 L47 46" fill="none" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </span>
+        <span class="brand-copy">
+          <span class="brand-name">Ghoulish</span>
+          <span class="brand-tag">Made By Ghoul</span>
+        </span>
+      </a>
+
+      <div class="topbar-actions">
+        <div class="search-field">
+          <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m20 20-3.6-3.6"></path>
+          </svg>
+          <label class="sr-only" for="search">Search games by title</label>
+          <input id="search" type="search" placeholder="Search games…" autocomplete="off" spellcheck="false" enterkeyhint="search">
+          <kbd class="search-hint" aria-hidden="true">/</kbd>
+        </div>
+
+        <button type="button" class="settings-button" id="open-settings" aria-label="Settings" aria-haspopup="dialog" aria-controls="settings" title="Settings">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="3.1"></circle>
+            <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.88-.34 1.7 1.7 0 0 0-1 1.56V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.11-1.56 1.7 1.7 0 0 0-1.88.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.7 1.7 0 0 0 .34-1.88 1.7 1.7 0 0 0-1.56-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.56-1.11 1.7 1.7 0 0 0-.34-1.88l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.7 1.7 0 0 0 1.88.34H9a1.7 1.7 0 0 0 1-1.56V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.56 1.7 1.7 0 0 0 1.88-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.7 1.7 0 0 0-.34 1.88V9a1.7 1.7 0 0 0 1.56 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1Z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="catalog" class="page">
+    <section class="intro" aria-labelledby="intro-title">
+      <div class="intro-copy">
+        <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span> Three libraries One Site.</p>
+        <h1 id="intro-title">GHOULISH<br><span>Have Fun</span></h1>
+        <p class="lede">videcoded most of ts</p>
+      </div>
+
+      <div class="stats" aria-label="Catalog statistics">
+        <div class="stat">
+          <span class="stat-value" id="stat-games">—</span>
+          <span class="stat-label">games</span>
+        </div>
+        <div class="stat">
+          <span class="stat-value" id="stat-sources">—</span>
+          <span class="stat-label">libraries</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured" id="featured" aria-labelledby="featured-title" hidden="">
+      <div class="featured-head">
+        <h2 class="featured-title" id="featured-title">Featured games</h2>
+        <p class="featured-note">Hand-picked highlights</p>
+      </div>
+      <div class="featured-grid" id="featured-grid"></div>
+    </section>
+
+    <div class="catalog-bar">
+      <div class="filters" id="filters" role="group" aria-label="Filter by source">
+        <button type="button" class="filter is-active" data-source="all" aria-pressed="true">
+          All <span class="filter-count" id="count-all">—</span>
+        </button>
+        <button type="button" class="filter" data-source="gn-math" aria-pressed="false">
+          <span class="source-dot source-gn-math" aria-hidden="true"></span>
+          GN-Math <span class="filter-count" id="count-gn-math">—</span>
+        </button>
+        <button type="button" class="filter" data-source="lumin" aria-pressed="false">
+          <span class="source-dot source-lumin" aria-hidden="true"></span>
+          Lumin <span class="filter-count" id="count-lumin">—</span>
+        </button>
+        <button type="button" class="filter" data-source="noahs-tutoring" aria-pressed="false">
+          <span class="source-dot source-noahs-tutoring" aria-hidden="true"></span>
+          Noah’s Tutoring <span class="filter-count" id="count-noahs-tutoring">—</span>
+        </button>
+      </div>
+
+      <p class="result-count" id="result-count" aria-live="polite">Loading libraries…</p>
+    </div>
+
+    <div class="notice" id="notice" role="status" hidden="">
+      <span class="notice-mark" aria-hidden="true">!</span>
+      <p class="notice-text" id="notice-text"></p>
+      <button type="button" class="btn btn-small btn-quiet" id="notice-retry">Retry</button>
+    </div>
+
+    <section class="catalog" aria-label="Game catalog">
+      <div class="game-grid" id="grid" aria-busy="true"></div>
+
+      <div class="state-panel" id="error-state" role="alert" hidden="">
+        <span class="state-icon" aria-hidden="true">⚠</span>
+        <h2>The catalog didn’t load</h2>
+        <p id="error-message">All game sources could not be reached. Check your connection and try again.</p>
+        <button type="button" class="btn btn-primary" id="error-retry">Try again</button>
+        <p class="state-hint">Blocked by an extension, firewall, or strict network? See the troubleshooting notes in the README.</p>
+      </div>
+
+      <div class="state-panel state-empty" id="empty-state" hidden="">
+        <span class="state-icon" aria-hidden="true">◌</span>
+        <h2 id="empty-title">No games found</h2>
+        <p id="empty-message">Try a shorter search or switch back to all sources.</p>
+        <button type="button" class="btn btn-quiet" id="clear-filters">Clear filters</button>
+      </div>
+
+      <div class="load-more-wrap" id="load-more-wrap" hidden="">
+        <button type="button" class="btn btn-quiet load-more" id="load-more">Show more games</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Ghoulish · the worst website ever</p>
+    <p class="footer-muted">Games are hosted by OTHER people NOT me</p>
+  </footer>
+
+  <!-- Settings: cloak, accent, and about:blank controls. -->
+  <section class="settings" id="settings" role="dialog" aria-modal="true" aria-labelledby="settings-title" hidden="">
+    <div class="settings-backdrop" data-settings-close=""></div>
+
+    <div class="settings-panel">
+      <header class="settings-head">
+        <div>
+          <p class="settings-title">Settings</p>
+        </div>
+        <button type="button" class="settings-close" id="settings-close" data-settings-close="" aria-label="Close settings">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m6 6 12 12M18 6 6 18"></path>
+          </svg>
+        </button>
+      </header>
+
+      <div class="settings-body">
+        <section class="settings-group" aria-labelledby="settings-cloak-label">
+          <h3 id="settings-cloak-label">Cloak</h3>
+          <p class="settings-help">Disguise the tab as a Google page. The title and favicon change until you turn the cloak off.</p>
+          <div class="cloak-options" id="cloak-options" role="group" aria-label="Cloak page as">
+            <button type="button" class="cloak-option is-active" data-cloak="off" aria-pressed="true">
+              <span class="cloak-off" aria-hidden="true">✕</span>
+              Off
+            </button>
+            <button type="button" class="cloak-option" data-cloak="classroom" aria-pressed="false">
+              <img src="https://ssl.gstatic.com/classroom/favicon.png" alt="" width="16" height="16" referrerpolicy="no-referrer">
+              Classroom
+            </button>
+            <button type="button" class="cloak-option" data-cloak="drive" aria-pressed="false">
+              <img src="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png" alt="" width="16" height="16" referrerpolicy="no-referrer">
+              Drive
+            </button>
+            <button type="button" class="cloak-option" data-cloak="google" aria-pressed="false">
+              <img src="https://www.google.com/favicon.ico" alt="" width="16" height="16" referrerpolicy="no-referrer">
+              Google
+            </button>
+          </div>
+        </section>
+
+        <section class="settings-group" aria-labelledby="settings-color-label">
+          <h3 id="settings-color-label">Secondary color</h3>
+          <p class="settings-help">Choose the accent used across the page. A custom color stays put when you switch libraries.</p>
+          <div class="color-row">
+            <label class="color-control" for="accent-color">
+              <input type="color" id="accent-color" value="#ff3b4e" aria-label="Secondary color">
+              <span class="color-value" id="accent-value">#FF3B4E</span>
+            </label>
+            <button type="button" class="btn btn-quiet btn-small" id="accent-reset" disabled="">Use page themes</button>
+          </div>
+          <p class="settings-note" id="accent-note">Pick a color to lock every library to the same accent.</p>
+        </section>
+
+        <section class="settings-group" aria-labelledby="settings-bg-label">
+          <h3 id="settings-bg-label">Background</h3>
+          <p class="settings-help">Pick a preset or use your own image. Presets follow the active color, and custom images are dimmed so the catalog stays readable.</p>
+          <div class="bg-options" id="bg-options" role="group" aria-label="Background design">
+            <button type="button" class="bg-option is-active" data-bg="embers" aria-pressed="true">
+              <span class="bg-swatch bg-swatch-embers" aria-hidden="true"></span>
+              Embers
+            </button>
+            <button type="button" class="bg-option" data-bg="grid" aria-pressed="false">
+              <span class="bg-swatch bg-swatch-grid" aria-hidden="true"></span>
+              Grid
+            </button>
+            <button type="button" class="bg-option" data-bg="fog" aria-pressed="false">
+              <span class="bg-swatch bg-swatch-fog" aria-hidden="true"></span>
+              Fog
+            </button>
+            <button type="button" class="bg-option" data-bg="midnight" aria-pressed="false">
+              <span class="bg-swatch bg-swatch-midnight" aria-hidden="true"></span>
+              Midnight
+            </button>
+          </div>
+          <label class="bg-image-field" for="bg-image-url">
+            <span class="bg-image-label">Image URL</span>
+            <input type="url" id="bg-image-url" placeholder="https://example.com/background.jpg" autocomplete="off" spellcheck="false" inputmode="url">
+          </label>
+          <div class="bg-image-actions">
+            <button type="button" class="btn btn-quiet btn-small" id="bg-image-apply">Use image</button>
+            <button type="button" class="btn btn-quiet btn-small" id="bg-image-clear" hidden="">Remove image</button>
+          </div>
+          <p class="settings-note" id="bg-note">Choose a preset, or paste a direct image URL.</p>
+        </section>
+
+        <section class="settings-group" aria-labelledby="settings-window-label">
+          <h3 id="settings-window-label">Window</h3>
+          <p class="settings-help">Open a clean copy of Ghoulish in a new tab whose address stays about:blank.</p>
+          <button type="button" class="btn btn-primary settings-wide" id="open-in-blank">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14 4h6v6"></path>
+              <path d="M20 4 10 14"></path>
+              <path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"></path>
+            </svg>
+            Open in about:blank
+          </button>
+        </section>
+
+        <section class="settings-group" aria-labelledby="settings-file-label">
+          <h3 id="settings-file-label">Portable file</h3>
+          <p class="settings-help">Save the whole site as one SVG file you can open in any browser. Games still need an internet connection.</p>
+          <button type="button" class="btn btn-quiet settings-wide" id="download-svg">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 3v12"></path>
+              <path d="m7 10 5 5 5-5"></path>
+              <path d="M4 21h16"></path>
+            </svg>
+            Download SVG
+          </button>
+          <p class="settings-note">The downloaded file keeps the catalog, settings, cloak, downloads, fullscreen, and about:blank.</p>
+        </section>
+
+        <p class="settings-status" id="settings-status" role="status" hidden=""></p>
+
+        <div class="settings-footer">
+          <a class="btn btn-quiet settings-github" href="https://github.com/SFDGSDFGSDFGSDFGSDFG" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.93.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.58 9.58 0 0 1 12 6.8c.85 0 1.7.11 2.5.33 1.9-1.29 2.74-1.02 2.74-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"></path>
+            </svg>
+            My GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fullscreen player: mounted over the catalog while a game is open. -->
+  <section class="player" id="player" role="dialog" aria-modal="true" aria-labelledby="player-title" hidden="">
+    <div class="player-bar">
+      <div class="player-identity">
+        <span class="source-dot" id="player-source-dot" aria-hidden="true"></span>
+        <div class="player-heading">
+          <h2 class="player-title" id="player-title">Game</h2>
+          <span class="player-source" id="player-source">Source</span>
+        </div>
+      </div>
+
+      <div class="player-actions">
+        <button type="button" class="btn btn-quiet btn-reload" id="reload-game" aria-label="Reload game">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 11a8 8 0 1 0-2.3 5.7"></path>
+            <path d="M20 5v6h-6"></path>
+          </svg>
+          <span>Reload</span>
+        </button>
+        <button type="button" class="btn btn-quiet btn-icon" id="download-game" aria-label="Download this game as an HTML file" title="Download HTML" disabled="">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3v12"></path>
+            <path d="m7 10 5 5 5-5"></path>
+            <path d="M4 21h16"></path>
+          </svg>
+        </button>
+        <button type="button" class="btn btn-quiet btn-icon" id="fullscreen-game" aria-label="Enter fullscreen" aria-pressed="false" title="Fullscreen">
+          <svg class="icon-expand" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8 3H5a2 2 0 0 0-2 2v3"></path>
+            <path d="M16 3h3a2 2 0 0 1 2 2v3"></path>
+            <path d="M8 21H5a2 2 0 0 1-2-2v-3"></path>
+            <path d="M16 21h3a2 2 0 0 0 2-2v-3"></path>
+          </svg>
+          <svg class="icon-compress" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8 3v3a2 2 0 0 1-2 2H3"></path>
+            <path d="M16 3v3a2 2 0 0 0 2 2h3"></path>
+            <path d="M8 21v-3a2 2 0 0 0-2-2H3"></path>
+            <path d="M16 21v-3a2 2 0 0 1 2-2h3"></path>
+          </svg>
+        </button>
+        <button type="button" class="btn btn-close" id="close-game" aria-label="Close game">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m6 6 12 12M18 6 6 18"></path>
+          </svg>
+          <span>Close</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="player-stage">
+      <!-- allow-same-origin lets games use localStorage; only load games from the trusted CDNs. -->
+      <iframe id="game-frame" title="Game player" allow="autoplay; fullscreen; gamepad *; keyboard-map; clipboard-write; clipboard-read; encrypted-media; accelerometer; gyroscope; magnetometer; picture-in-picture" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin allow-forms allow-modals allow-popups allow-downloads allow-pointer-lock allow-orientation-lock allow-presentation"></iframe>
+      <div class="frame-status" id="frame-status" role="status" aria-live="polite" hidden=""></div>
+    </div>
+  </section>
+
+  <p class="toast" id="toast" role="status" aria-live="polite" hidden=""></p>
+
+  <noscript>
+    <div class="noscript">Ghoulish needs JavaScript enabled to load the game catalog.</div>
+  </noscript>
+
+  <script>
+(() => {
+'use strict';
+
+  // Captured before the catalog renders, so Download SVG can package the app
+  // from disk too, where fetch() cannot read a sibling file.
+  const __GHOULISH_PRISTINE_HTML__ = document.documentElement.outerHTML;
+
+  const __gnMathSource = (() => {
+/**
+ * GN-Math source
+ *
+ * Mirrors the data layer from Sigma Games:
+ *   src/sources/gn-math/index.ts  (config + CDN URL patterns)
+ *   src/pages/GnMath.tsx          (zones fetch, filtering, cover/url expansion)
+ *
+ * The catalog metadata is a single `zones.json` file. Each entry uses
+ * `{COVER_URL}` and `{HTML_URL}` placeholders. Game HTML comes from the
+ * SFDGSDFGSDFGSDFGSDFG/gnmath repo's `html-main/` directory rather than the
+ * older freebuisness/html mirror; covers still come from freebuisness/covers.
+ *
+ * CORS: cdn.jsdelivr.net sends `Access-Control-Allow-Origin: *`, so this fetch
+ * works from any static host. A raw.githubusercontent.com mirror is used as a
+ * fallback in case jsDelivr is blocked on the network.
+ */
+
+const SOURCE = Object.freeze({
+  id: 'gn-math',
+  label: 'GN-Math',
+});
+
+const ZONES_URL = 'https://cdn.jsdelivr.net/gh/freebuisness/assets@latest/zones.json';
+const ZONES_FALLBACK_URL =
+  'https://raw.githubusercontent.com/freebuisness/assets/main/zones.json';
+const COVER_BASE = 'https://cdn.jsdelivr.net/gh/freebuisness/covers@main';
+const HTML_BASE =
+  'https://cdn.jsdelivr.net/gh/SFDGSDFGSDFGSDFGSDFG/gnmath@main/html-main';
+const REQUEST_TIMEOUT_MS = 20000;
+
+/**
+ * @typedef {Object} Game
+ * @property {string} id          Globally unique id.
+ * @property {string} title       Display title.
+ * @property {string} thumbnail   Image URL.
+ * @property {string} playUrl     Canonical URL of the game's HTML entry point.
+ * @property {'gn-math'} source   Source id.
+ * @property {string[]} [tags]    Optional source-specific tags.
+ */
+
+/** Fetch JSON with a timeout, trying the primary URL then a mirror. */
+async function fetchJson(primaryUrl, fallbackUrl) {
+  let lastError;
+
+  for (const url of [primaryUrl, fallbackUrl]) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+
+    try {
+      const response = await fetch(url, {
+        signal: controller.signal,
+        credentials: 'omit',
+        mode: 'cors',
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      const data = await response.json();
+      if (!Array.isArray(data)) {
+        throw new Error('Unexpected response shape');
+      }
+      return data;
+    } catch (error) {
+      lastError = error;
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+
+  throw new Error(`Could not load GN-Math catalog (${lastError?.message || 'network error'})`);
+}
+
+/** Apply the same cleanup rules used by the Sigma Games GN-Math page. */
+function isRealGame(zone) {
+  if (!zone || !zone.name || !zone.url) return false;
+
+  const name = String(zone.name).trim().toLowerCase();
+  const url = String(zone.url).trim().toLowerCase();
+
+  if (name.startsWith('[!]') || name.includes('[!]') || name.startsWith('[?')) return false;
+  if (
+    name.includes('comment') ||
+    name.includes('discord') ||
+    name.includes('suggest game') ||
+    name.includes('suggest a game')
+  ) {
+    return false;
+  }
+  if (
+    url.includes('discord.gg') ||
+    url.includes('forms.gle') ||
+    url.includes('docs.google.com/forms')
+  ) {
+    return false;
+  }
+
+  return true;
+}
+
+/** Expand the source's CDN placeholders into real URLs. */
+function expandUrl(template, base) {
+  return String(template || '').split('{COVER_URL}').join(base).split('{HTML_URL}').join(base);
+}
+
+function slugify(value) {
+  return String(value)
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function isHttpUrl(value) {
+  try {
+    const url = new URL(value);
+    return url.protocol === 'http:' || url.protocol === 'https:';
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Fetch every GN-Math game, normalized into the shared Game shape.
+ * Throws if the catalog cannot be fetched so the UI can report a partial failure.
+ *
+ * @returns {Promise<Game[]>}
+ */
+async function fetchGames() {
+  const zones = await fetchJson(ZONES_URL, ZONES_FALLBACK_URL);
+  const seenIds = new Set();
+
+  const games = zones.filter(isRealGame).flatMap((zone, index) => {
+    const title = String(zone.name).trim();
+    const rawId = zone.id !== undefined && zone.id !== null ? String(zone.id) : slugify(title);
+    const thumbnail = expandUrl(zone.cover, COVER_BASE);
+    const playUrl = expandUrl(zone.url, HTML_BASE);
+
+    if (!isHttpUrl(playUrl)) return [];
+
+    let id = `gn-math:${rawId || index}`;
+
+    // Defensive: ids are unique in today's zones.json, but a duplicate would
+    // otherwise make two cards open the wrong game.
+    let suffix = 2;
+    while (seenIds.has(id)) {
+      id = `gn-math:${rawId || index}-${suffix++}`;
+    }
+    seenIds.add(id);
+
+    return [{
+      id,
+      title,
+      thumbnail: isHttpUrl(thumbnail) ? thumbnail : '',
+      playUrl,
+      source: SOURCE.id,
+      tags: Array.isArray(zone.special) ? zone.special.slice() : [],
+    }];
+  });
+
+  // Match the reference sort: numbers first, then case-insensitive A–Z.
+  games.sort((a, b) =>
+    a.title.localeCompare(b.title, undefined, { numeric: true, sensitivity: 'base' })
+  );
+
+  return games;
+}
+
+  return { SOURCE, fetchGames };
+  })();
+  const GN_MATH = __gnMathSource.SOURCE;
+  const fetchGnMath = __gnMathSource.fetchGames;
+
+  const __luminSource = (() => {
+/**
+ * Lumin source
+ *
+ * The Sigma Games reference (`src/sources/lumin/index.ts`) is a static
+ * TypeScript array exported as `defaultLuminGames`, and `src/games/lumin.ts`
+ * re-exports it. To keep this site build-free, we fetch the identical JSON
+ * mirror shipped beside that file:
+ *
+ *   src/sources/lumin/lumin.json
+ *
+ * Each item is `{ id, title, url, image, description }`; `url` is already the
+ * playable HTML entry point and `image` the thumbnail. If you later point this
+ * at a Lumin SDK/API endpoint, only the URL constant and the field mapping
+ * below need to change — the rest of the app consumes the shared Game shape.
+ *
+ * CORS: jsDelivr allows cross-origin reads (`Access-Control-Allow-Origin: *`).
+ * raw.githubusercontent.com is used as a fallback mirror.
+ */
+
+const SOURCE = Object.freeze({
+  id: 'lumin',
+  label: 'Lumin',
+});
+
+const LUMIN_URL =
+  'https://cdn.jsdelivr.net/gh/deeeland0ohio/sigma_games@main/src/sources/lumin/lumin.json';
+const LUMIN_FALLBACK_URL =
+  'https://raw.githubusercontent.com/deeeland0ohio/sigma_games/main/src/sources/lumin/lumin.json';
+const REQUEST_TIMEOUT_MS = 20000;
+
+/**
+ * @typedef {Object} Game
+ * @property {string} id
+ * @property {string} title
+ * @property {string} thumbnail
+ * @property {string} playUrl
+ * @property {'lumin'} source
+ * @property {string} [description]
+ */
+
+/** Fetch the catalog with a timeout, trying the primary URL then a mirror. */
+async function fetchCatalog() {
+  let lastError;
+
+  for (const url of [LUMIN_URL, LUMIN_FALLBACK_URL]) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+
+    try {
+      const response = await fetch(url, {
+        signal: controller.signal,
+        credentials: 'omit',
+        mode: 'cors',
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      const data = await response.json();
+      const games = Array.isArray(data) ? data : data && Array.isArray(data.games) ? data.games : null;
+      if (!games) {
+        throw new Error('Unexpected response shape');
+      }
+      return games;
+    } catch (error) {
+      lastError = error;
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+
+  throw new Error(`Could not load Lumin catalog (${lastError?.message || 'network error'})`);
+}
+
+function slugify(value) {
+  return String(value)
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function isHttpUrl(value) {
+  try {
+    const url = new URL(value);
+    return url.protocol === 'http:' || url.protocol === 'https:';
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Fetch every Lumin game, normalized into the shared Game shape.
+ * Throws if the catalog cannot be fetched so the UI can report a partial failure.
+ *
+ * @returns {Promise<Game[]>}
+ */
+async function fetchGames() {
+  const items = await fetchCatalog();
+  const seenIds = new Set();
+
+  const games = items
+    .filter((item) => item && item.title && item.url)
+    .flatMap((item, index) => {
+      const title = String(item.title).trim();
+      const playUrl = String(item.url).trim();
+      if (!isHttpUrl(playUrl)) return [];
+
+      const rawId = item.id ? String(item.id) : slugify(title) || String(index);
+      let id = `lumin:${rawId}`;
+
+      // The source contains one duplicate id; keep every game reachable.
+      let suffix = 2;
+      while (seenIds.has(id)) {
+        id = `lumin:${rawId}-${suffix++}`;
+      }
+      seenIds.add(id);
+
+      const thumbnail = item.image ? String(item.image).trim() : '';
+
+      return [{
+        id,
+        title,
+        thumbnail: isHttpUrl(thumbnail) ? thumbnail : '',
+        playUrl,
+        source: SOURCE.id,
+        description: item.description ? String(item.description) : '',
+      }];
+    });
+
+  // Match the reference sort: numbers first, then case-insensitive A–Z.
+  games.sort((a, b) =>
+    a.title.localeCompare(b.title, undefined, { numeric: true, sensitivity: 'base' })
+  );
+
+  return games;
+}
+
+
+  return { SOURCE, fetchGames };
+  })();
+  const LUMIN = __luminSource.SOURCE;
+  const fetchLumin = __luminSource.fetchGames;
+
+  const __noahsTutoringSource = (() => {
+/**
+ * Noah's Tutoring source
+ *
+ * Noah's Tutoring Hub keeps its catalog in a plain JavaScript array in
+ * `js/games.js`. The live site is served by Caddy without CORS headers, so the
+ * catalog and game files are read through jsDelivr instead:
+ *
+ *   https://github.com/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor
+ *
+ * The file is not JSON (it is `const games = [ … ];` with unquoted keys), so it
+ * is parsed by quoting the top-level keys and removing trailing commas before
+ * handing it to JSON.parse. Entries marked `secret: true` are hidden upstream
+ * and are skipped here for the same reason.
+ *
+ * Both jsDelivr and the raw.githubusercontent.com fallback send
+ * `Access-Control-Allow-Origin: *`. Game HTML is served as `text/plain`, which
+ * is why the player fetches it and writes it into the iframe instead of
+ * navigating to the URL directly.
+ */
+
+const SOURCE = Object.freeze({
+  id: 'noahs-tutoring',
+  label: "Noah's Tutoring",
+});
+
+const CATALOG_URL =
+  'https://cdn.jsdelivr.net/gh/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor@master/js/games.js';
+const CATALOG_FALLBACK_URL =
+  'https://raw.githubusercontent.com/NoahsAmazingTutoringHelp/Noahs-Calculus-Tutor/master/js/games.js';
+const REQUEST_TIMEOUT_MS = 20000;
+
+/**
+ * @typedef {Object} Game
+ * @property {string} id
+ * @property {string} title
+ * @property {string} thumbnail
+ * @property {string} playUrl
+ * @property {'noahs-tutoring'} source
+ * @property {string} [description]
+ */
+
+/** Fetch the catalog text with a timeout, trying the primary URL then a mirror. */
+async function fetchCatalogText() {
+  let lastError;
+
+  for (const url of [CATALOG_URL, CATALOG_FALLBACK_URL]) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+
+    try {
+      const response = await fetch(url, {
+        signal: controller.signal,
+        credentials: 'omit',
+        mode: 'cors',
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      const text = await response.text();
+      if (!text.trim()) {
+        throw new Error('The catalog was empty');
+      }
+      return text;
+    } catch (error) {
+      lastError = error;
+    } finally {
+      clearTimeout(timer);
+    }
+  }
+
+  throw new Error(
+    `Could not load Noah's Tutoring catalog (${lastError?.message || 'network error'})`
+  );
+}
+
+/** Convert the upstream object literal into parseable JSON and return its entries. */
+function parseCatalog(text) {
+  const start = text.indexOf('[');
+  const end = text.lastIndexOf(']');
+
+  if (start === -1 || end <= start) {
+    throw new Error('Unexpected catalog shape');
+  }
+
+  const literal = text
+    .slice(start, end + 1)
+    .replace(/([{,]\s*)([A-Za-z_$][\w$]*)\s*:/g, '$1"$2":')
+    .replace(/,\s*([}\]])/g, '$1');
+
+  let data;
+  try {
+    data = JSON.parse(literal);
+  } catch {
+    throw new Error('Could not parse the Noah’s Tutoring catalog');
+  }
+
+  if (!Array.isArray(data) || data.length === 0) {
+    throw new Error('Unexpected catalog shape');
+  }
+
+  return data;
+}
+
+function slugify(value) {
+  return String(value)
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+function isHttpUrl(value) {
+  try {
+    const url = new URL(value);
+    return url.protocol === 'http:' || url.protocol === 'https:';
+  } catch {
+    return false;
+  }
+}
+
+/** Use the HTML filename as the id where possible, with a title fallback. */
+function idFromUrl(playUrl, title) {
+  try {
+    const file = new URL(playUrl).pathname.split('/').pop() || '';
+    const base = file.replace(/\.html?$/i, '');
+    if (base) return base;
+  } catch {
+    // Fall through to the slug.
+  }
+  return slugify(title);
+}
+
+/**
+ * Fetch every public Noah's Tutoring game, normalized into the shared Game shape.
+ * Throws if the catalog cannot be fetched so the UI can report a partial failure.
+ *
+ * @returns {Promise<Game[]>}
+ */
+async function fetchGames() {
+  const items = parseCatalog(await fetchCatalogText());
+  const seenIds = new Set();
+
+  const games = items
+    .filter((item) => item && item.title && item.url && item.secret !== true)
+    .flatMap((item, index) => {
+      const title = String(item.title).trim();
+      const playUrl = String(item.url).trim();
+      if (!isHttpUrl(playUrl)) return [];
+
+      const rawId = idFromUrl(playUrl, title) || String(index);
+      let id = `noahs-tutoring:${rawId}`;
+
+      let suffix = 2;
+      while (seenIds.has(id)) {
+        id = `noahs-tutoring:${rawId}-${suffix++}`;
+      }
+      seenIds.add(id);
+
+      const thumbnail = item.image ? String(item.image).trim() : '';
+
+      return [{
+        id,
+        title,
+        thumbnail: isHttpUrl(thumbnail) ? thumbnail : '',
+        playUrl,
+        source: SOURCE.id,
+        description: item.desc ? String(item.desc) : '',
+      }];
+    });
+
+  // Match the reference sort: numbers first, then case-insensitive A–Z.
+  games.sort((a, b) =>
+    a.title.localeCompare(b.title, undefined, { numeric: true, sensitivity: 'base' })
+  );
+
+  return games;
+}
+
+  return { SOURCE, fetchGames };
+  })();
+  const NOAHS_TUTORING = __noahsTutoringSource.SOURCE;
+  const fetchNoahsTutoring = __noahsTutoringSource.fetchGames;
+
+const BATCH_SIZE = 72;
+const SOURCES = [GN_MATH, LUMIN, NOAHS_TUTORING];
+const SOURCE_BY_ID = new Map(SOURCES.map((source) => [source.id, source]));
+const LOADERS = new Map([
+  [GN_MATH.id, fetchGnMath],
+  [LUMIN.id, fetchLumin],
+  [NOAHS_TUTORING.id, fetchNoahsTutoring],
+]);
+const FRAME_TIMEOUT_MS = 30000;
+const DEFAULT_TITLE = 'Ghoulish — Unblxcked Games';
+
+/** Skate 3's box art, re-encoded and embedded so the site stays one file. */
+const SKATE_COVER =
+  'data:image/webp;base64,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';
+
+/** Skate 3 stays pinned; the rest of the row is drawn randomly on each catalog load. */
+const SKATE_GAME = Object.freeze({
+  id: 'featured:skate-3',
+  title: 'Skate 3',
+  author: 'EA',
+  portrait: true,
+  thumbnail: SKATE_COVER,
+  playUrl: 'https://cdn.jsdelivr.net/gh/SFDGSDFGSDFGSDFGSDFG/gnmath@main/html-main/skate-3.html',
+  source: GN_MATH.id,
+});
+const FEATURED_COUNT = 5;
+
+const SETTINGS_KEY = 'ghoulish:settings:v1';
+const DEFAULT_FAVICON = document.getElementById('favicon')?.getAttribute('href') || '';
+const BACKGROUNDS = Object.freeze({
+  embers: 'Embers',
+  grid: 'Grid',
+  fog: 'Fog',
+  midnight: 'Midnight',
+});
+const CLOAKS = Object.freeze({
+  off: Object.freeze({ title: '', icon: '' }),
+  classroom: Object.freeze({
+    title: 'Google Classroom',
+    icon: 'https://ssl.gstatic.com/classroom/favicon.png',
+  }),
+  drive: Object.freeze({
+    title: 'Google Drive',
+    icon: 'https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png',
+  }),
+  google: Object.freeze({
+    title: 'Google',
+    icon: 'https://www.google.com/favicon.ico',
+  }),
+});
+
+const numberFormatter = new Intl.NumberFormat();
+
+const els = {
+  search: document.getElementById('search'),
+  filters: document.getElementById('filters'),
+  featured: document.getElementById('featured'),
+  featuredGrid: document.getElementById('featured-grid'),
+  grid: document.getElementById('grid'),
+  resultCount: document.getElementById('result-count'),
+  notice: document.getElementById('notice'),
+  noticeText: document.getElementById('notice-text'),
+  noticeRetry: document.getElementById('notice-retry'),
+  errorState: document.getElementById('error-state'),
+  errorMessage: document.getElementById('error-message'),
+  errorRetry: document.getElementById('error-retry'),
+  emptyState: document.getElementById('empty-state'),
+  emptyTitle: document.getElementById('empty-title'),
+  emptyMessage: document.getElementById('empty-message'),
+  clearFilters: document.getElementById('clear-filters'),
+  loadMoreWrap: document.getElementById('load-more-wrap'),
+  loadMore: document.getElementById('load-more'),
+  statGames: document.getElementById('stat-games'),
+  statSources: document.getElementById('stat-sources'),
+  countAll: document.getElementById('count-all'),
+  countGnMath: document.getElementById('count-gn-math'),
+  countLumin: document.getElementById('count-lumin'),
+  countNoahsTutoring: document.getElementById('count-noahs-tutoring'),
+  player: document.getElementById('player'),
+  playerTitle: document.getElementById('player-title'),
+  playerSource: document.getElementById('player-source'),
+  playerSourceDot: document.getElementById('player-source-dot'),
+  closeGame: document.getElementById('close-game'),
+  reloadGame: document.getElementById('reload-game'),
+  downloadGame: document.getElementById('download-game'),
+  fullscreenGame: document.getElementById('fullscreen-game'),
+  frame: document.getElementById('game-frame'),
+  frameStatus: document.getElementById('frame-status'),
+  toast: document.getElementById('toast'),
+  catalog: document.getElementById('catalog'),
+  topbar: document.querySelector('.topbar'),
+  footer: document.querySelector('.footer'),
+  skipLink: document.querySelector('.skip-link'),
+  favicon: document.getElementById('favicon'),
+  openSettings: document.getElementById('open-settings'),
+  settings: document.getElementById('settings'),
+  settingsClose: document.getElementById('settings-close'),
+  settingsStatus: document.getElementById('settings-status'),
+  cloakOptions: document.getElementById('cloak-options'),
+  accentColor: document.getElementById('accent-color'),
+  accentValue: document.getElementById('accent-value'),
+  accentReset: document.getElementById('accent-reset'),
+  accentNote: document.getElementById('accent-note'),
+  bgOptions: document.getElementById('bg-options'),
+  bgImageUrl: document.getElementById('bg-image-url'),
+  bgImageApply: document.getElementById('bg-image-apply'),
+  bgImageClear: document.getElementById('bg-image-clear'),
+  bgNote: document.getElementById('bg-note'),
+  openInBlank: document.getElementById('open-in-blank'),
+  downloadSvg: document.getElementById('download-svg'),
+};
+
+const state = {
+  games: [],
+  byId: new Map(),
+  query: '',
+  source: 'all',
+  visible: BATCH_SIZE,
+  rendered: 0,
+  status: new Map(),
+  loaded: false,
+  current: null,
+  lastFocused: null,
+  framePhase: 'idle',
+  frameToken: 0,
+  frameHideTimer: 0,
+  preparedHtml: '',
+  featured: [],
+  fullscreenExitedAt: 0,
+  cloak: 'off',
+  customAccent: null,
+  bgDesign: 'embers',
+  bgImage: '',
+  settingsOpen: false,
+  lastSettingsFocus: null,
+};
+
+/* ------------------------------------------------------------------ Startup */
+
+els.catalog.hidden = false;
+els.footer.hidden = false;
+
+initSettings();
+initFullscreen();
+wireEvents();
+showSkeletons();
+loadCatalog();
+
+/* ------------------------------------------------------------------- Events */
+
+function wireEvents() {
+  els.search.addEventListener('input', () => {
+    state.query = els.search.value;
+    resetAndRender();
+  });
+
+  els.filters.addEventListener('click', (event) => {
+    const button = event.target.closest('[data-source]');
+    if (!button || button.disabled) return;
+    state.source = button.dataset.source;
+    resetAndRender();
+  });
+
+  els.grid.addEventListener('click', handleCardClick);
+  els.featuredGrid.addEventListener('click', handleCardClick);
+
+  els.loadMore.addEventListener('click', () => {
+    state.visible += BATCH_SIZE;
+    renderResults({ reset: false });
+  });
+
+  els.errorRetry.addEventListener('click', loadCatalog);
+  els.noticeRetry.addEventListener('click', loadCatalog);
+
+  els.clearFilters.addEventListener('click', () => {
+    state.query = '';
+    state.source = 'all';
+    els.search.value = '';
+    resetAndRender();
+    els.search.focus();
+  });
+
+  els.closeGame.addEventListener('click', closePlayer);
+  els.reloadGame.addEventListener('click', () => {
+    if (state.current) loadGameFrame(state.current);
+  });
+  els.downloadGame.addEventListener('click', () => {
+    if (state.current) downloadGame(state.current, els.downloadGame);
+  });
+  els.fullscreenGame.addEventListener('click', toggleFullscreen);
+  document.addEventListener('fullscreenchange', handleFullscreenChange);
+
+  els.frame.addEventListener('load', () => {
+    if (state.framePhase === 'ready') {
+      clearTimeout(state.frameHideTimer);
+      els.frameStatus.hidden = true;
+    }
+  });
+
+  els.openSettings.addEventListener('click', openSettings);
+  els.settings.addEventListener('click', (event) => {
+    if (event.target.closest('[data-settings-close]')) closeSettings();
+  });
+
+  els.cloakOptions.addEventListener('click', (event) => {
+    const button = event.target.closest('[data-cloak]');
+    if (!button) return;
+    applyCloak(button.dataset.cloak);
+    saveSettings();
+  });
+
+  els.accentColor.addEventListener('input', () => {
+    if (applyCustomAccent(els.accentColor.value)) saveSettings();
+  });
+
+  els.accentReset.addEventListener('click', () => {
+    clearCustomAccent();
+    saveSettings();
+  });
+
+  els.bgOptions.addEventListener('click', (event) => {
+    const button = event.target.closest('[data-bg]');
+    if (!button) return;
+    applyBackgroundPreset(button.dataset.bg);
+    saveSettings();
+  });
+
+  els.bgImageApply.addEventListener('click', () => {
+    if (applyBackgroundImage(els.bgImageUrl.value)) saveSettings();
+  });
+
+  els.bgImageUrl.addEventListener('keydown', (event) => {
+    if (event.key !== 'Enter') return;
+    event.preventDefault();
+    if (applyBackgroundImage(els.bgImageUrl.value)) saveSettings();
+  });
+
+  els.bgImageUrl.addEventListener('input', () => setSettingsStatus(''));
+
+  els.bgImageClear.addEventListener('click', () => {
+    clearBackgroundImage();
+    saveSettings();
+  });
+
+  els.openInBlank.addEventListener('click', openInBlank);
+  els.downloadSvg.addEventListener('click', () => downloadSvg(els.downloadSvg));
+
+  document.addEventListener('keydown', handleGlobalKeydown);
+}
+
+function handleCardClick(event) {
+  const download = event.target.closest('.card-download');
+  if (download) {
+    const game = getGameById(download.dataset.downloadGame);
+    if (game) downloadGame(game, download);
+    return;
+  }
+
+  const opener = event.target.closest('.card-open');
+  if (!opener) return;
+  const card = opener.closest('.game-card');
+  const game = card ? getGameById(card.dataset.gameId) : null;
+  if (game) openGame(game, opener);
+}
+
+function getGameById(id) {
+  return state.byId.get(id) || state.featured.find((game) => game.id === id) || null;
+}
+
+function handleGlobalKeydown(event) {
+  const typing = isTypingTarget(event.target);
+
+  if (event.key === '/' && !typing && els.player.hidden && !state.settingsOpen) {
+    event.preventDefault();
+    els.search.focus();
+    return;
+  }
+
+  if (event.key === 'Escape') {
+    if (state.settingsOpen) {
+      event.preventDefault();
+      closeSettings();
+      return;
+    }
+
+    if (!els.player.hidden) {
+      // The first Escape leaves browser fullscreen; the next one closes the player.
+      if (isFullscreenActive()) {
+        const wrapper = getWrapperFullscreen();
+        if (wrapper) wrapper.exit().catch(() => {});
+        return;
+      }
+      if (Date.now() - state.fullscreenExitedAt < 350) return;
+      event.preventDefault();
+      closePlayer();
+    } else if (document.activeElement === els.search) {
+      els.search.blur();
+    }
+  }
+
+  // Keep keyboard focus inside whichever overlay is open.
+  if (event.key === 'Tab') {
+    if (state.settingsOpen) {
+      trapFocus(els.settings, event);
+    } else if (!els.player.hidden) {
+      trapFocus(els.player, event);
+    }
+  }
+}
+
+function trapFocus(container, event) {
+  const focusable = Array.from(
+    container.querySelectorAll('button:not([disabled]), a[href], input:not([disabled]), iframe')
+  ).filter((element) => element.offsetParent !== null || element === els.frame);
+
+  if (focusable.length === 0) return;
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+
+  if (event.shiftKey && document.activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && document.activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+}
+
+function isTypingTarget(target) {
+  if (!target || !(target instanceof HTMLElement)) return false;
+  const tag = target.tagName;
+  return tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT' || target.isContentEditable;
+}
+
+/* ----------------------------------------------------------------- Catalog */
+
+async function loadCatalog() {
+  state.loaded = false;
+  state.games = [];
+  state.byId.clear();
+  state.rendered = 0;
+  state.visible = BATCH_SIZE;
+  state.status = new Map(SOURCES.map((source) => [source.id, { state: 'loading' }]));
+
+  els.notice.hidden = true;
+  els.errorState.hidden = true;
+  els.emptyState.hidden = true;
+  els.loadMoreWrap.hidden = true;
+  els.grid.hidden = false;
+  els.grid.setAttribute('aria-busy', 'true');
+  els.resultCount.textContent = 'Loading libraries…';
+  els.statGames.textContent = '—';
+  els.statSources.textContent = '—';
+  setFilterCounts();
+  updateFilterButtons();
+  showSkeletons();
+
+  const results = await Promise.allSettled(
+    SOURCES.map((source) => LOADERS.get(source.id)())
+  );
+
+  const games = [];
+  const failures = [];
+
+  results.forEach((result, index) => {
+    const source = SOURCES[index];
+
+    if (result.status === 'fulfilled') {
+      state.status.set(source.id, { state: 'ready', count: result.value.length });
+      games.push(...result.value);
+    } else {
+      state.status.set(source.id, { state: 'error', error: result.reason });
+      failures.push({ source, error: result.reason });
+      console.error(`[Ghoulish] ${source.label} failed to load:`, result.reason);
+    }
+  });
+
+  state.loaded = true;
+  state.games = sortGames(games);
+  state.byId = new Map(state.games.map((game) => [game.id, game]));
+  state.rendered = 0;
+  state.visible = BATCH_SIZE;
+
+  updateStats();
+  setFilterCounts();
+  updateFilterButtons();
+  renderFeatured();
+
+  if (failures.length === SOURCES.length) {
+    showCatalogError();
+    return;
+  }
+
+  els.grid.setAttribute('aria-busy', 'false');
+
+  if (failures.length > 0) {
+    showPartialNotice(failures);
+  }
+
+  renderResults({ reset: true });
+}
+
+function sortGames(games) {
+  return games.sort((a, b) =>
+    a.title.localeCompare(b.title, undefined, { numeric: true, sensitivity: 'base' })
+  );
+}
+
+function getFilteredGames() {
+  const terms = state.query
+    .trim()
+    .toLowerCase()
+    .split(/\s+/)
+    .filter(Boolean);
+
+  return state.games.filter((game) => {
+    if (state.source !== 'all' && game.source !== state.source) return false;
+    if (terms.length === 0) return true;
+
+    const title = game.title.toLowerCase();
+    return terms.every((term) => title.includes(term));
+  });
+}
+
+function resetAndRender() {
+  state.visible = BATCH_SIZE;
+  state.rendered = 0;
+  updateFilterButtons();
+  renderResults({ reset: true });
+}
+
+function renderResults({ reset }) {
+  const filtered = getFilteredGames();
+
+  if (reset) {
+    state.rendered = 0;
+    els.grid.replaceChildren();
+  }
+
+  const end = Math.min(state.visible, filtered.length);
+  if (end > state.rendered) {
+    appendCards(filtered.slice(state.rendered, end));
+    state.rendered = end;
+  }
+
+  els.grid.setAttribute('aria-busy', 'false');
+  els.grid.hidden = filtered.length === 0;
+  els.emptyState.hidden = filtered.length !== 0;
+  els.loadMoreWrap.hidden = filtered.length <= state.rendered;
+  els.loadMore.textContent = `Show more (${formatNumber(
+    Math.max(filtered.length - state.rendered, 0)
+  )} remaining)`;
+
+  updateResultCount(filtered);
+  updateFeaturedVisibility();
+
+  if (filtered.length === 0) {
+    updateEmptyState();
+  }
+}
+
+function appendCards(games) {
+  const fragment = document.createDocumentFragment();
+  for (const game of games) {
+    fragment.append(createCard(game));
+  }
+  els.grid.append(fragment);
+}
+
+function renderFeatured() {
+  const picks = [SKATE_GAME];
+
+  if (state.games.length > 0) {
+    picks.push(
+      ...pickRandomFeatured(
+        FEATURED_COUNT - picks.length,
+        new Set([normalizeTitle(SKATE_GAME.title)])
+      )
+    );
+  }
+
+  state.featured = picks;
+  els.featuredGrid.replaceChildren();
+
+  const fragment = document.createDocumentFragment();
+  picks.forEach((game, index) => {
+    const card = createCard(game);
+    card.classList.add('featured-card');
+
+    if (index === 0) {
+      card.classList.add('is-hero');
+
+      if (game.portrait) {
+        const art = card.querySelector('.card-art');
+        art.classList.add('is-portrait');
+        art.style.setProperty('--hero-cover', `url("${game.thumbnail}")`);
+      }
+    }
+
+    fragment.append(card);
+  });
+
+  els.featuredGrid.append(fragment);
+  updateFeaturedVisibility();
+}
+
+/** Draw distinct random catalog games, preferring entries that have cover art. */
+function pickRandomFeatured(count, excludedTitles) {
+  const seen = new Set(excludedTitles);
+  const pool = state.games.filter(
+    (game) => game.thumbnail && !seen.has(normalizeTitle(game.title))
+  );
+  const picks = [];
+
+  for (let index = 0; index < pool.length && picks.length < count; index += 1) {
+    const swapWith = index + Math.floor(Math.random() * (pool.length - index));
+    [pool[index], pool[swapWith]] = [pool[swapWith], pool[index]];
+
+    const game = pool[index];
+    const key = normalizeTitle(game.title);
+    if (seen.has(key)) continue;
+
+    seen.add(key);
+    picks.push(game);
+  }
+
+  return picks;
+}
+
+function normalizeTitle(value) {
+  return String(value).toLowerCase().replace(/[^a-z0-9]+/g, '');
+}
+
+function updateFeaturedVisibility() {
+  const browsingAll = state.source === 'all' && !state.query.trim();
+  els.featured.hidden = !browsingAll || state.featured.length === 0;
+}
+
+function createCard(game) {
+  const source = SOURCE_BY_ID.get(game.source);
+  const card = document.createElement('div');
+  card.className = 'game-card';
+  card.dataset.gameId = game.id;
+  card.dataset.source = game.source;
+
+  const open = document.createElement('button');
+  open.type = 'button';
+  open.className = 'card-open';
+  open.setAttribute(
+    'aria-label',
+    `Play ${game.title}${game.author ? ` by ${game.author}` : source ? ` from ${source.label}` : ''}`
+  );
+
+  const art = document.createElement('span');
+  art.className = 'card-art';
+  art.dataset.initial = getInitials(game.title);
+  art.style.setProperty('--hue', String(hueFor(game)));
+
+  if (game.thumbnail) {
+    const image = document.createElement('img');
+    image.alt = '';
+    image.loading = 'lazy';
+    image.decoding = 'async';
+    image.referrerPolicy = 'no-referrer';
+    image.addEventListener(
+      'error',
+      () => {
+        art.classList.add('is-fallback');
+        image.remove();
+      },
+      { once: true }
+    );
+    image.src = game.thumbnail;
+    art.append(image);
+  } else {
+    art.classList.add('is-fallback');
+  }
+
+  if (source) {
+    const badge = document.createElement('span');
+    badge.className = 'card-source';
+    badge.dataset.source = game.source;
+
+    if (game.author) {
+      badge.classList.add('card-author');
+      badge.textContent = game.author;
+    } else {
+      const dot = document.createElement('span');
+      dot.className = `source-dot source-${game.source}`;
+      dot.setAttribute('aria-hidden', 'true');
+
+      badge.append(dot, document.createTextNode(source.label));
+    }
+
+    art.append(badge);
+  }
+
+  const title = document.createElement('span');
+  title.className = 'card-title';
+  title.textContent = game.title;
+  open.append(art, title);
+
+  const download = document.createElement('button');
+  download.type = 'button';
+  download.className = 'card-download';
+  download.dataset.downloadGame = game.id;
+  download.setAttribute('aria-label', `Download ${game.title} as an HTML file`);
+  download.title = 'Download HTML';
+  download.innerHTML =
+    '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"></path><path d="m7 10 5 5 5-5"></path><path d="M4 21h16"></path></svg>';
+
+  card.append(open, download);
+  return card;
+}
+
+function showSkeletons() {
+  const fragment = document.createDocumentFragment();
+
+  for (let index = 0; index < 12; index += 1) {
+    const card = document.createElement('div');
+    card.className = 'skeleton-card';
+    card.setAttribute('aria-hidden', 'true');
+
+    const art = document.createElement('div');
+    art.className = 'skeleton-art';
+
+    const line = document.createElement('div');
+    line.className = 'skeleton-line';
+
+    card.append(art, line);
+    fragment.append(card);
+  }
+
+  els.grid.replaceChildren(fragment);
+  els.grid.hidden = false;
+}
+
+function updateStats() {
+  const readySources = SOURCES.filter(
+    (source) => state.status.get(source.id)?.state === 'ready'
+  ).length;
+
+  els.statGames.textContent = state.loaded ? formatNumber(state.games.length) : '—';
+  els.statSources.textContent = state.loaded ? String(readySources) : '—';
+}
+
+function setFilterCounts() {
+  const counts = new Map(SOURCES.map((source) => [source.id, 0]));
+  for (const game of state.games) {
+    counts.set(game.source, (counts.get(game.source) || 0) + 1);
+  }
+
+  els.countAll.textContent = state.loaded ? formatNumber(state.games.length) : '—';
+  els.countGnMath.textContent = state.loaded ? formatNumber(counts.get(GN_MATH.id) || 0) : '—';
+  els.countLumin.textContent = state.loaded ? formatNumber(counts.get(LUMIN.id) || 0) : '—';
+  els.countNoahsTutoring.textContent = state.loaded
+    ? formatNumber(counts.get(NOAHS_TUTORING.id) || 0)
+    : '—';
+
+  for (const button of els.filters.querySelectorAll('[data-source]')) {
+    const source = button.dataset.source;
+    if (source === 'all') continue;
+
+    const status = state.status.get(source);
+    const count = counts.get(source) || 0;
+    const unavailable = state.loaded && status?.state === 'error' && count === 0;
+    button.disabled = unavailable;
+    button.title = unavailable ? `${SOURCE_BY_ID.get(source)?.label} could not be loaded` : '';
+  }
+}
+
+function updateFilterButtons() {
+  for (const button of els.filters.querySelectorAll('[data-source]')) {
+    const active = button.dataset.source === state.source;
+    button.classList.toggle('is-active', active);
+    button.setAttribute('aria-pressed', String(active));
+  }
+
+  // The shell follows the selected library: red for All, crimson for GN-Math,
+  // teal for Lumin, and amber for Noah's Tutoring. A custom accent from
+  // Settings locks the shell to that color instead.
+  document.body.dataset.theme = state.customAccent ? 'all' : state.source;
+  document.body.classList.toggle('theme-locked', Boolean(state.customAccent));
+}
+
+function updateResultCount(filtered) {
+  if (!state.loaded) {
+    els.resultCount.textContent = 'Loading libraries…';
+    return;
+  }
+
+  if (state.games.length === 0) {
+    els.resultCount.textContent = 'Catalog unavailable';
+    return;
+  }
+
+  const isFiltered = Boolean(state.query.trim()) || state.source !== 'all';
+  els.resultCount.textContent = isFiltered
+    ? `${formatNumber(filtered.length)} of ${formatNumber(state.games.length)} games`
+    : `${formatNumber(state.games.length)} games`;
+}
+
+function updateEmptyState() {
+  const label = state.source === 'all' ? '' : SOURCE_BY_ID.get(state.source)?.label;
+  const hasQuery = Boolean(state.query.trim());
+
+  if (hasQuery && label) {
+    els.emptyTitle.textContent = `No ${label} games match “${state.query.trim()}”`;
+    els.emptyMessage.textContent = 'Try a different title or switch back to all sources.';
+  } else if (hasQuery) {
+    els.emptyTitle.textContent = `No games match “${state.query.trim()}”`;
+    els.emptyMessage.textContent = 'Try a shorter search, or clear the search to browse everything.';
+  } else if (label) {
+    els.emptyTitle.textContent = `No ${label} games available`;
+    els.emptyMessage.textContent = 'That source is unavailable right now. Try the other source.';
+  } else {
+    els.emptyTitle.textContent = 'No games found';
+    els.emptyMessage.textContent = 'Try a shorter search or switch back to all sources.';
+  }
+}
+
+function showPartialNotice(failures) {
+  const failedLabels = failures.map((failure) => failure.source.label).join(' and ');
+  const readyLabels = SOURCES.filter(
+    (source) => state.status.get(source.id)?.state === 'ready'
+  )
+    .map((source) => source.label)
+    .join(' and ');
+
+  const strong = document.createElement('strong');
+  strong.textContent = `${failedLabels} couldn’t load.`;
+
+  const detail = document.createElement('span');
+  detail.textContent = ` Showing ${formatNumber(state.games.length)} games from ${readyLabels}.`;
+
+  els.noticeText.replaceChildren(strong, detail);
+  els.noticeText.title = failures
+    .map((failure) => `${failure.source.label}: ${failure.error?.message || 'Unknown error'}`)
+    .join('\n');
+  els.notice.hidden = false;
+}
+
+function showCatalogError() {
+  els.grid.replaceChildren();
+  els.grid.hidden = true;
+  els.grid.setAttribute('aria-busy', 'false');
+  els.emptyState.hidden = true;
+  els.loadMoreWrap.hidden = true;
+  els.notice.hidden = true;
+  els.errorState.hidden = false;
+
+  els.errorMessage.textContent =
+    'All game sources could not be reached. This is usually a network, firewall, or CORS problem. Check your connection and try again.';
+  els.resultCount.textContent = 'Catalog unavailable';
+  updateStats();
+}
+
+/* ------------------------------------------------------------------- Player */
+
+async function openGame(game, trigger) {
+  state.current = game;
+  state.lastFocused = trigger || document.activeElement;
+
+  els.playerTitle.textContent = game.title;
+  els.playerSource.textContent =
+    game.author || SOURCE_BY_ID.get(game.source)?.label || game.source;
+  els.playerSourceDot.className = `source-dot source-${game.source}`;
+  els.playerSourceDot.hidden = Boolean(game.author);
+  els.player.dataset.source = game.source;
+  els.frame.title = `Play ${game.title}`;
+  state.preparedHtml = '';
+  els.downloadGame.disabled = true;
+  refreshTitle();
+
+  els.player.hidden = false;
+  document.body.classList.add('player-open');
+  setBackgroundInert(true);
+  els.closeGame.focus();
+
+  await loadGameFrame(game);
+}
+
+function closePlayer() {
+  if (els.player.hidden) return;
+
+  const wrapper = getWrapperFullscreen();
+  if (wrapper && wrapper.isActive()) {
+    wrapper.exit().catch(() => {});
+  } else if (document.fullscreenElement && document.exitFullscreen) {
+    document.exitFullscreen().catch(() => {});
+  }
+  document.body.classList.remove('is-fullscreen');
+
+  state.frameToken += 1;
+  state.framePhase = 'idle';
+  state.current = null;
+  state.preparedHtml = '';
+  els.downloadGame.disabled = true;
+  clearTimeout(state.frameHideTimer);
+  state.frameHideTimer = 0;
+
+  // Navigate away before hiding the overlay so the game's audio/scripts stop.
+  els.frame.removeAttribute('srcdoc');
+  els.frame.src = 'about:blank';
+  els.player.hidden = true;
+  els.frameStatus.hidden = true;
+  document.body.classList.remove('player-open');
+  refreshTitle();
+  setBackgroundInert(false);
+
+  if (state.lastFocused && state.lastFocused.isConnected) {
+    state.lastFocused.focus();
+  }
+  state.lastFocused = null;
+}
+
+async function loadGameFrame(game) {
+  const token = (state.frameToken += 1);
+  state.framePhase = 'loading';
+  state.preparedHtml = '';
+  els.downloadGame.disabled = true;
+  els.frame.removeAttribute('srcdoc');
+  els.frame.src = 'about:blank';
+  showFrameLoading(game);
+
+  try {
+    const html = await fetchGameHtml(game.playUrl);
+    if (token !== state.frameToken) return;
+
+    const prepared = prepareGameHtml(html, game.playUrl);
+    state.framePhase = 'ready';
+    state.preparedHtml = prepared;
+    els.downloadGame.disabled = false;
+    els.frame.srcdoc = prepared;
+
+    // Normally the iframe's load event clears this. Keep a safety timer for
+    // documents that never fire a load event (broken scripts, offline CDN).
+    clearTimeout(state.frameHideTimer);
+    state.frameHideTimer = setTimeout(() => {
+      if (token === state.frameToken) els.frameStatus.hidden = true;
+    }, 8000);
+  } catch (error) {
+    if (token !== state.frameToken) return;
+    state.framePhase = 'error';
+    state.preparedHtml = '';
+    els.downloadGame.disabled = true;
+    console.error(`[Ghoulish] Could not load ${game.title}:`, error);
+    showFrameError(game, error);
+  }
+}
+
+async function fetchGameHtml(url) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), FRAME_TIMEOUT_MS);
+
+  try {
+    const response = await fetch(url, {
+      mode: 'cors',
+      credentials: 'omit',
+      referrerPolicy: 'no-referrer',
+      signal: controller.signal,
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
+    const html = await response.text();
+    if (!html.trim()) {
+      throw new Error('The game page was empty');
+    }
+    return html;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+/**
+ * Make a fetched game document self-contained in an iframe:
+ * - resolve a relative existing <base> against the game URL;
+ * - inject a <base> when the game has none, so its CSS/JS/images load.
+ */
+function prepareGameHtml(html, gameUrl) {
+  const baseHref = new URL('.', gameUrl).href;
+
+  if (/<base\b[^>]*href\s*=/i.test(html)) {
+    return html.replace(
+      /(<base\b[^>]*href\s*=\s*)(["'])(.*?)\2/i,
+      (match, prefix, quote, href) => {
+        try {
+          return `${prefix}${quote}${escapeAttribute(new URL(href, gameUrl).href)}${quote}`;
+        } catch {
+          return match;
+        }
+      }
+    );
+  }
+
+  const baseTag = `<base href="${escapeAttribute(baseHref)}">`;
+
+  if (/<head[^>]*>/i.test(html)) {
+    return html.replace(/<head[^>]*>/i, (head) => `${head}\n${baseTag}`);
+  }
+
+  if (/<html[^>]*>/i.test(html)) {
+    return html.replace(/<html[^>]*>/i, (htmlTag) => `${htmlTag}\n<head>${baseTag}</head>`);
+  }
+
+  return `${baseTag}\n${html}`;
+}
+
+function showFrameLoading(game) {
+  const card = document.createElement('div');
+  card.className = 'status-card';
+
+  const spinner = document.createElement('span');
+  spinner.className = 'spinner';
+  spinner.setAttribute('aria-hidden', 'true');
+
+  const text = document.createElement('p');
+  text.append(document.createTextNode('Loading '));
+  const title = document.createElement('strong');
+  title.textContent = game.title;
+  text.append(title, document.createTextNode('…'));
+
+  const hint = document.createElement('span');
+  hint.className = 'status-hint';
+  hint.textContent = `Fetching game files from ${safeHostname(game.playUrl)}`;
+
+  card.append(spinner, text, hint);
+  els.frameStatus.replaceChildren(card);
+  els.frameStatus.hidden = false;
+}
+
+function showFrameError(game, error) {
+  clearTimeout(state.frameHideTimer);
+
+  const card = document.createElement('div');
+  card.className = 'status-card';
+
+  const icon = document.createElement('span');
+  icon.className = 'state-icon';
+  icon.setAttribute('aria-hidden', 'true');
+  icon.textContent = '!';
+
+  const heading = document.createElement('p');
+  const strong = document.createElement('strong');
+  strong.textContent = 'This game couldn’t be embedded.';
+  heading.append(strong);
+
+  const detail = document.createElement('span');
+  detail.className = 'status-hint';
+  detail.textContent = 'The game files may be blocked by your network or unavailable on the CDN.';
+
+  const actions = document.createElement('div');
+  actions.className = 'status-actions';
+
+  const retry = document.createElement('button');
+  retry.type = 'button';
+  retry.className = 'btn btn-primary';
+  retry.textContent = 'Try again';
+  retry.addEventListener('click', () => loadGameFrame(game));
+
+  const open = document.createElement('a');
+  open.className = 'btn btn-quiet';
+  open.href = game.playUrl;
+  open.target = '_blank';
+  open.rel = 'noopener noreferrer';
+  open.textContent = 'Open game URL';
+
+  actions.append(retry, open);
+  card.append(icon, heading, detail);
+
+  if (error?.message) {
+    card.title = error.message;
+  }
+
+  card.append(actions);
+  els.frameStatus.replaceChildren(card);
+  els.frameStatus.hidden = false;
+}
+
+function setBackgroundInert(inert) {
+  for (const element of [els.topbar, els.catalog, els.footer, els.skipLink]) {
+    if (element) element.inert = inert;
+  }
+}
+
+/* --------------------------------------------------------------- Downloads */
+
+async function downloadGame(game, button) {
+  if (!game) return;
+  setDownloadBusy(button, true);
+
+  try {
+    const html =
+      state.current === game && state.preparedHtml
+        ? state.preparedHtml
+        : prepareGameHtml(await fetchGameHtml(game.playUrl), game.playUrl);
+
+    saveGameHtml(html, game.title);
+    showToast(`Saved “${game.title}” as an HTML file.`);
+  } catch (error) {
+    console.error(`[Ghoulish] Could not download ${game.title}:`, error);
+    showToast(
+      `Couldn’t download “${game.title}”. The game host blocked the file.`,
+      'error'
+    );
+  } finally {
+    setDownloadBusy(button, false);
+    if (button === els.downloadGame) {
+      button.disabled = !(state.current === game && Boolean(state.preparedHtml));
+    }
+  }
+}
+
+async function downloadSvg(button) {
+  setDownloadBusy(button, true);
+  setSettingsStatus('Preparing the SVG file…');
+
+  try {
+    const source = await getPortableSvgSource();
+    if (!source) {
+      setSettingsStatus(
+        'Couldn’t build ghoulish 2.svg. Open the SVG directly, or serve this page next to the SVG file.'
+      );
+      return;
+    }
+
+    saveSvgFile(source);
+    setSettingsStatus('Saved ghoulish 2.svg — the whole site in one file.');
+  } catch (error) {
+    console.error('[Ghoulish] Could not download the SVG:', error);
+    setSettingsStatus('Couldn’t prepare the SVG file. Open ghoulish 2.svg directly and try again.');
+  } finally {
+    setDownloadBusy(button, false);
+  }
+}
+
+async function getPortableSvgSource() {
+  try {
+    const parentWindow = window.parent;
+    if (parentWindow && parentWindow !== window) {
+      const exportSvg = parentWindow.__GHOULISH_EXPORT_SVG__;
+      if (typeof exportSvg === 'function') {
+        const source = exportSvg();
+        if (isPortableSvg(source)) return source;
+      }
+    }
+  } catch {
+    // A cross-origin parent cannot hand us the outer SVG; try the file below.
+  }
+
+  if (isPortableSvg(window.__GHOULISH_SVG_SOURCE__)) {
+    return window.__GHOULISH_SVG_SOURCE__;
+  }
+
+  const built = buildPortableSvg();
+  if (built) return built;
+
+  try {
+    const url = new URL('ghoulish 2.svg', document.baseURI);
+    const response = await fetch(url, { cache: 'no-store' });
+    if (!response.ok) return '';
+    const source = await response.text();
+    return isPortableSvg(source) ? source : '';
+  } catch {
+    return '';
+  }
+}
+
+function buildPortableSvg() {
+  const wrapperElement = document.getElementById('portable-wrapper');
+  const wrapper = wrapperElement ? wrapperElement.textContent.trim() : '';
+  if (!__GHOULISH_PRISTINE_HTML__ || !wrapper) return '';
+
+  const iconElement = document.getElementById('favicon');
+  const icon = (iconElement && iconElement.getAttribute('href')) || '';
+  const safeIcon = icon.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+  const cdata = (value) => String(value).replace(/]]]]><![CDATA[>/g, ']]]]]]><![CDATA[><![CDATA[>');
+
+  // Inline scripts cannot contain a literal closing script tag, so the two
+  // closing tags below use an escaped slash; the generated SVG gets them back.
+  const svg = `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xhtml="http://www.w3.org/1999/xhtml"
+     width="100%"
+     height="100%"
+     style="display:block;width:100vw;height:100vh;height:100dvh;overflow:hidden;background:#060506">
+  <title id="doc-title">Ghoulish</title>
+  <desc>Ghoulish unblocked games catalog. Open this SVG directly in a browser.</desc>
+  <xhtml:link id="top-icon" rel="icon" href="${safeIcon}" />
+  <foreignObject x="0" y="0" width="100%" height="100%">
+    <xhtml:iframe
+      id="app"
+      title="Ghoulish unblocked games catalog"
+      allow="autoplay; fullscreen; gamepad *; clipboard-write; clipboard-read; encrypted-media; accelerometer; gyroscope"
+      referrerpolicy="no-referrer"
+      style="display:block;width:100%;height:100%;border:0;background:#060506"
+    ></xhtml:iframe>
+  </foreignObject>
+  <script type="text/plain" id="app-source"><![CDATA[
+${cdata(__GHOULISH_PRISTINE_HTML__)}
+  ]]]]><![CDATA[><\/script>
+  <script><![CDATA[
+${cdata(wrapper)}
+  ]]]]><![CDATA[><\/script>
+</svg>
+`;
+
+  return isPortableSvg(svg) ? svg : '';
+}
+
+function isPortableSvg(source) {
+  return (
+    typeof source === 'string' &&
+    /<svg[\s>]/i.test(source) &&
+    source.includes('id="app-source"')
+  );
+}
+
+function saveSvgFile(source) {
+  const blob = new Blob([source], { type: 'image/svg+xml;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+
+  link.href = url;
+  link.download = 'ghoulish 2.svg';
+  link.style.display = 'none';
+  document.body.append(link);
+  link.click();
+  link.remove();
+
+  setTimeout(() => URL.revokeObjectURL(url), 10000);
+}
+
+function setDownloadBusy(button, busy) {
+  if (!button) return;
+
+  if (busy) {
+    button.dataset.wasDisabled = button.disabled ? 'true' : 'false';
+    button.disabled = true;
+  } else {
+    button.disabled = button.dataset.wasDisabled === 'true';
+    delete button.dataset.wasDisabled;
+  }
+
+  button.classList.toggle('is-busy', busy);
+  button.setAttribute('aria-busy', String(busy));
+}
+
+function saveGameHtml(html, title) {
+  const blob = new Blob([html], { type: 'text/html;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+
+  link.href = url;
+  link.download = `${safeFileName(title)}.html`;
+  link.style.display = 'none';
+  document.body.append(link);
+  link.click();
+  link.remove();
+
+  setTimeout(() => URL.revokeObjectURL(url), 10000);
+}
+
+function safeFileName(title) {
+  const name = String(title || '')
+    .replace(/[<>:"\\/|?*\u0000-\u001f]/g, '-')
+    .replace(/\s+/g, ' ')
+    .replace(/[. ]+$/g, '')
+    .trim()
+    .slice(0, 80);
+
+  return name || 'game';
+}
+
+let toastTimer = 0;
+
+function showToast(message, tone = 'info') {
+  clearTimeout(toastTimer);
+  els.toast.textContent = message;
+  els.toast.dataset.tone = tone;
+  els.toast.hidden = false;
+  toastTimer = setTimeout(() => {
+    els.toast.hidden = true;
+  }, 4200);
+}
+
+/* --------------------------------------------------------------- Fullscreen */
+
+function getWrapperFullscreen() {
+  if (document.fullscreenEnabled || window.parent === window) return null;
+
+  try {
+    const bridge = window.parent.__GHOULISH_TOP_FULLSCREEN__;
+    return bridge && bridge.enabled ? bridge : null;
+  } catch {
+    return null;
+  }
+}
+
+function isFullscreenActive() {
+  const wrapper = getWrapperFullscreen();
+  if (wrapper) {
+    try {
+      return Boolean(wrapper.isActive());
+    } catch {
+      return false;
+    }
+  }
+
+  return Boolean(document.fullscreenElement);
+}
+
+function initFullscreen() {
+  const wrapper = getWrapperFullscreen();
+  const native =
+    document.fullscreenEnabled && typeof els.player.requestFullscreen === 'function';
+
+  if (!wrapper && !native) {
+    els.fullscreenGame.hidden = true;
+    return;
+  }
+
+  if (wrapper) {
+    document.addEventListener('ghoulish:top-fullscreen-change', handleFullscreenChange);
+  }
+}
+
+async function toggleFullscreen() {
+  const wrapper = getWrapperFullscreen();
+
+  if (wrapper) {
+    try {
+      if (wrapper.isActive()) {
+        await wrapper.exit();
+      } else {
+        await wrapper.enter();
+      }
+    } catch (error) {
+      console.error('[Ghoulish] Could not toggle fullscreen:', error);
+      showToast('Fullscreen was blocked by the browser.', 'error');
+    }
+    handleFullscreenChange();
+    return;
+  }
+
+  if (document.fullscreenElement) {
+    try {
+      await document.exitFullscreen();
+    } catch (error) {
+      console.error('[Ghoulish] Could not exit fullscreen:', error);
+    }
+    return;
+  }
+
+  try {
+    await els.player.requestFullscreen();
+  } catch (error) {
+    console.error('[Ghoulish] Could not enter fullscreen:', error);
+    showToast('Fullscreen was blocked by the browser.', 'error');
+  }
+}
+
+function handleFullscreenChange() {
+  const active = isFullscreenActive();
+  if (!active) state.fullscreenExitedAt = Date.now();
+
+  document.body.classList.toggle('is-fullscreen', active);
+
+  els.fullscreenGame.setAttribute('aria-pressed', String(active));
+  els.fullscreenGame.setAttribute(
+    'aria-label',
+    active ? 'Exit fullscreen' : 'Enter fullscreen'
+  );
+  els.fullscreenGame.title = active ? 'Exit fullscreen' : 'Fullscreen';
+}
+
+/* ------------------------------------------------------------------ Settings */
+
+function initSettings() {
+  const stored = readSettings();
+  if (stored.accent) applyCustomAccent(stored.accent);
+  applyCloak(stored.cloak);
+  applyBackground(stored.background);
+  syncAccentInput();
+}
+
+function readSettings() {
+  const injected = window.__GHOULISH_SETTINGS__;
+  if (injected && typeof injected === 'object') return injected;
+
+  try {
+    const stored = JSON.parse(localStorage.getItem(SETTINGS_KEY) || 'null');
+    return stored && typeof stored === 'object' ? stored : {};
+  } catch {
+    return {};
+  }
+}
+
+function saveSettings() {
+  try {
+    localStorage.setItem(
+      SETTINGS_KEY,
+      JSON.stringify({
+        cloak: state.cloak,
+        accent: state.customAccent,
+        background: { design: state.bgDesign, image: state.bgImage },
+      })
+    );
+  } catch {
+    // Storage can be unavailable on some file:// or private browsing setups.
+  }
+}
+
+function openSettings() {
+  if (state.settingsOpen || !els.player.hidden) return;
+
+  state.lastSettingsFocus =
+    document.activeElement && document.activeElement !== document.body
+      ? document.activeElement
+      : els.openSettings;
+  state.settingsOpen = true;
+  setSettingsStatus('');
+  syncAccentInput();
+  syncBackgroundControls();
+  els.settings.hidden = false;
+  document.body.classList.add('settings-open');
+  setBackgroundInert(true);
+  els.settingsClose.focus();
+}
+
+function closeSettings() {
+  if (!state.settingsOpen) return;
+
+  state.settingsOpen = false;
+  els.settings.hidden = true;
+  document.body.classList.remove('settings-open');
+  if (els.player.hidden) setBackgroundInert(false);
+
+  const target = state.lastSettingsFocus;
+  state.lastSettingsFocus = null;
+  if (target && target.isConnected) target.focus();
+}
+
+function setSettingsStatus(message) {
+  els.settingsStatus.textContent = message;
+  els.settingsStatus.hidden = !message;
+}
+
+function applyCloak(id) {
+  state.cloak = Object.prototype.hasOwnProperty.call(CLOAKS, id) ? id : 'off';
+  const cloak = CLOAKS[state.cloak];
+  setFavicon(cloak.icon || DEFAULT_FAVICON);
+  updateCloakButtons();
+  refreshTitle();
+}
+
+function setFavicon(href) {
+  if (!els.favicon) return;
+  const next = els.favicon.cloneNode(false);
+  next.setAttribute('href', href);
+  els.favicon.replaceWith(next);
+  els.favicon = next;
+}
+
+function updateCloakButtons() {
+  for (const button of els.cloakOptions.querySelectorAll('[data-cloak]')) {
+    const active = button.dataset.cloak === state.cloak;
+    button.classList.toggle('is-active', active);
+    button.setAttribute('aria-pressed', String(active));
+  }
+}
+
+function applyBackground(value) {
+  const design =
+    value &&
+    typeof value === 'object' &&
+    Object.prototype.hasOwnProperty.call(BACKGROUNDS, value.design)
+      ? value.design
+      : 'embers';
+  const image = value && typeof value.image === 'string'
+    ? normalizeBackgroundUrl(value.image)
+    : '';
+
+  state.bgDesign = design;
+  state.bgImage = image || '';
+  applyBackgroundToBody();
+  syncBackgroundControls();
+}
+
+function applyBackgroundPreset(id) {
+  if (!Object.prototype.hasOwnProperty.call(BACKGROUNDS, id)) return;
+
+  state.bgDesign = id;
+  state.bgImage = '';
+  applyBackgroundToBody();
+  syncBackgroundControls();
+  setSettingsStatus('');
+}
+
+function applyBackgroundImage(value) {
+  const raw = String(value || '').trim();
+  const image = normalizeBackgroundUrl(raw);
+
+  if (!image) {
+    setSettingsStatus(
+      raw
+        ? 'Use a full image URL that starts with http:// or https://.'
+        : 'Paste an image URL first.'
+    );
+    els.bgImageUrl.focus();
+    return false;
+  }
+
+  state.bgImage = image;
+  applyBackgroundToBody();
+  syncBackgroundControls();
+  els.bgImageUrl.value = image;
+  setSettingsStatus('');
+  return true;
+}
+
+function clearBackgroundImage() {
+  state.bgImage = '';
+  applyBackgroundToBody();
+  syncBackgroundControls();
+  setSettingsStatus('');
+}
+
+function applyBackgroundToBody() {
+  const style = document.body.style;
+  document.body.dataset.bg = state.bgDesign;
+  document.body.classList.toggle('has-bg-image', Boolean(state.bgImage));
+
+  if (state.bgImage) {
+    style.setProperty('--bg-image', cssBackgroundUrl(state.bgImage));
+  } else {
+    style.removeProperty('--bg-image');
+  }
+}
+
+function syncBackgroundControls() {
+  for (const button of els.bgOptions.querySelectorAll('[data-bg]')) {
+    const active = !state.bgImage && button.dataset.bg === state.bgDesign;
+    button.classList.toggle('is-active', active);
+    button.setAttribute('aria-pressed', String(active));
+  }
+
+  if (document.activeElement !== els.bgImageUrl) {
+    els.bgImageUrl.value = state.bgImage;
+  }
+
+  els.bgImageClear.hidden = !state.bgImage;
+  els.bgNote.textContent = state.bgImage
+    ? 'Custom image active. Choose a preset to remove it.'
+    : 'Choose a preset, or paste a direct image URL.';
+}
+
+function normalizeBackgroundUrl(value) {
+  const raw = String(value || '').trim();
+  if (!raw) return '';
+
+  try {
+    const url = new URL(raw);
+    return url.protocol === 'http:' || url.protocol === 'https:' ? url.href : null;
+  } catch {
+    return null;
+  }
+}
+
+function cssBackgroundUrl(value) {
+  return `url("${String(value)}")`;
+}
+
+function refreshTitle() {
+  const cloak = CLOAKS[state.cloak];
+  if (cloak?.title) {
+    document.title = cloak.title;
+    return;
+  }
+
+  document.title = state.current ? `${state.current.title} — Ghoulish` : DEFAULT_TITLE;
+}
+
+function syncAccentInput() {
+  const computed = normalizeHex(
+    getComputedStyle(document.body).getPropertyValue('--accent')
+  );
+  const accent = state.customAccent || computed || '#ff3b4e';
+
+  els.accentColor.value = accent;
+  els.accentValue.textContent = accent.toUpperCase();
+  els.accentReset.disabled = !state.customAccent;
+  els.accentNote.textContent = state.customAccent
+    ? 'Custom color is locked. Switching libraries will not change the page theme.'
+    : 'Pick a color to lock every library to the same accent.';
+}
+
+function applyCustomAccent(value) {
+  const normalized = normalizeHex(value);
+  if (!normalized) return false;
+
+  const rgb = hexToRgb(normalized);
+  const hover = mixColor(rgb, [255, 255, 255], 0.16);
+  const deep = mixColor(rgb, [0, 0, 0], 0.48);
+  const style = document.body.style;
+
+  style.setProperty('--accent', normalized);
+  style.setProperty('--accent-hover', rgbToHex(hover));
+  style.setProperty('--accent-rgb', rgb.join(', '));
+  style.setProperty('--accent-deep', rgbToHex(deep));
+  style.setProperty('--accent-deep-rgb', deep.join(', '));
+  style.setProperty('--accent-ink', inkFor(rgb));
+
+  state.customAccent = normalized;
+  updateFilterButtons();
+  syncAccentInput();
+  return true;
+}
+
+function clearCustomAccent() {
+  state.customAccent = null;
+
+  for (const property of [
+    '--accent',
+    '--accent-hover',
+    '--accent-rgb',
+    '--accent-deep',
+    '--accent-deep-rgb',
+    '--accent-ink',
+  ]) {
+    document.body.style.removeProperty(property);
+  }
+
+  updateFilterButtons();
+  syncAccentInput();
+}
+
+async function openInBlank() {
+  let win = null;
+  try {
+    win = window.open('about:blank', '_blank');
+  } catch {
+    win = null;
+  }
+
+  if (!win) {
+    setSettingsStatus('The new tab was blocked. Allow pop-ups for this page and try again.');
+    return;
+  }
+
+  closeSettings();
+
+  let svgSource = '';
+  try {
+    svgSource = await getPortableSvgSource();
+  } catch {
+    svgSource = '';
+  }
+
+  try {
+    const standalone = buildStandaloneDocument();
+    const doc = win.document;
+
+    // Do not use document.open()/write(): Chrome can replace the about:blank
+    // address with the opener's URL. Building the DOM in place keeps the URL
+    // bar on about:blank.
+    win.__GHOULISH_SVG_SOURCE__ = svgSource;
+    win.__GHOULISH_SETTINGS__ = {
+      cloak: state.cloak,
+      accent: state.customAccent,
+      background: { design: state.bgDesign, image: state.bgImage },
+    };
+    doc.head.innerHTML = standalone.head;
+    doc.body.innerHTML = standalone.body;
+
+    for (const attribute of standalone.bodyAttributes) {
+      doc.body.setAttribute(attribute.name, attribute.value);
+    }
+
+    const runner = doc.createElement('script');
+    runner.textContent = standalone.script;
+    doc.body.append(runner);
+    win.focus();
+  } catch (error) {
+    console.error('[Ghoulish] Could not open about:blank:', error);
+    try {
+      win.close();
+    } catch {
+      // The blocked tab may already be gone.
+    }
+    openSettings();
+    setSettingsStatus('This browser would not let Ghoulish write to the new tab.');
+  }
+}
+
+function buildStandaloneDocument() {
+  const clone = document.documentElement.cloneNode(true);
+  const head = clone.querySelector('head');
+  const body = clone.querySelector('body');
+
+  const icon = head.querySelector('link[rel="icon"]');
+  if (icon) icon.setAttribute('href', DEFAULT_FAVICON);
+
+  // The live <title> already reflects the active cloak; leave it so the copy
+  // never flashes the Ghoulish name.
+  const title = head.querySelector('title');
+  if (title) title.textContent = document.title;
+
+  // Remove the controller from the cloned markup so it does not sit inert in
+  // the DOM; it is appended as a fresh script after the markup is installed.
+  const scriptElement = body.querySelector('script');
+  const scriptText = scriptElement ? scriptElement.textContent : '';
+  if (scriptElement) scriptElement.remove();
+  if (!scriptText) throw new Error('The app controller could not be serialized');
+
+  body.classList.remove('player-open', 'settings-open');
+  body.dataset.theme = 'all';
+
+  const settings = body.querySelector('#settings');
+  if (settings) settings.hidden = true;
+
+  const settingsStatus = body.querySelector('#settings-status');
+  if (settingsStatus) {
+    settingsStatus.hidden = true;
+    settingsStatus.textContent = '';
+  }
+
+  const toast = body.querySelector('#toast');
+  if (toast) {
+    toast.hidden = true;
+    toast.textContent = '';
+    delete toast.dataset.tone;
+  }
+
+  const downloadButton = body.querySelector('#download-game');
+  if (downloadButton) downloadButton.disabled = true;
+
+  // The copy fetches its own catalog, so skip the rendered cards and let the
+  // inline controller show skeletons again.
+  const grid = body.querySelector('#grid');
+  if (grid) {
+    grid.replaceChildren();
+    grid.setAttribute('aria-busy', 'true');
+  }
+
+  const bodyAttributes = Array.from(body.attributes).map((attribute) => ({
+    name: attribute.name,
+    value: attribute.value,
+  }));
+
+  return {
+    head: head.innerHTML,
+    body: body.innerHTML,
+    bodyAttributes,
+    script: scriptText,
+  };
+}
+
+function normalizeHex(value) {
+  let hex = String(value || '')
+    .trim()
+    .replace(/^#/, '');
+
+  if (hex.length === 3) {
+    hex = hex
+      .split('')
+      .map((character) => character + character)
+      .join('');
+  }
+
+  return /^[0-9a-fA-F]{6}$/.test(hex) ? `#${hex.toLowerCase()}` : null;
+}
+
+function hexToRgb(hex) {
+  const value = normalizeHex(hex) || '#000000';
+  return [
+    parseInt(value.slice(1, 3), 16),
+    parseInt(value.slice(3, 5), 16),
+    parseInt(value.slice(5, 7), 16),
+  ];
+}
+
+function rgbToHex(rgb) {
+  return `#${rgb
+    .map((channel) =>
+      Math.round(Math.min(255, Math.max(0, channel)))
+        .toString(16)
+        .padStart(2, '0')
+    )
+    .join('')}`;
+}
+
+function mixColor(rgb, target, amount) {
+  return rgb.map((channel, index) => channel + (target[index] - channel) * amount);
+}
+
+function relativeLuminance(rgb) {
+  const linear = rgb.map((channel) => {
+    const value = channel / 255;
+    return value <= 0.03928 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4;
+  });
+
+  return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2];
+}
+
+function inkFor(rgb) {
+  const luminance = relativeLuminance(rgb);
+  const onBlack = (luminance + 0.05) / 0.05;
+  const onWhite = 1.05 / (luminance + 0.05);
+  return onBlack >= onWhite ? '#14060a' : '#fffafb';
+}
+
+/* ------------------------------------------------------------------ Helpers */
+
+function formatNumber(value) {
+  return numberFormatter.format(value);
+}
+
+function getInitials(title) {
+  const words = String(title)
+    .replace(/[^\p{L}\p{N} ]+/gu, ' ')
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean);
+
+  if (words.length === 0) return '?';
+  if (words.length === 1) return words[0].slice(0, 2).toUpperCase();
+  return `${words[0][0]}${words[1][0]}`.toUpperCase();
+}
+
+/**
+ * Stable pseudo-random hue for fallback art. Each source keeps its own narrow
+ * colour band so missing covers still read as that library: crimson for
+ * GN-Math, teal for Lumin, amber for Noah's Tutoring.
+ */
+function hueFor(game) {
+  let hash = 0;
+  const value = game.id;
+  for (let index = 0; index < value.length; index += 1) {
+    hash = (hash * 31 + value.charCodeAt(index)) | 0;
+  }
+
+  const variation = Math.abs(hash);
+  if (game.source === LUMIN.id) return 164 + (variation % 28);
+  if (game.source === NOAHS_TUTORING.id) return 26 + (variation % 16);
+  if (game.source === GN_MATH.id) return 334 + (variation % 22);
+  return 22 + (variation % 18);
+}
+
+function safeHostname(url) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return 'the game CDN';
+  }
+}
+
+function escapeAttribute(value) {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+})();
+  </script></body></html>
+  ]]></script>
+  <script><![CDATA[
+(() => {
+  'use strict';
+
+  const iframe = document.getElementById('app');
+  const source = document.getElementById('app-source');
+  const titleEl = document.getElementById('doc-title');
+  const iconEl = document.getElementById('top-icon');
+  const DEFAULT_TITLE = 'Ghoulish';
+  const DEFAULT_ICON = iconEl.getAttribute('href') || '';
+
+  let lastTitle = '';
+  let lastIcon = '';
+
+  function sync() {
+    let doc = null;
+    try {
+      doc = iframe.contentDocument;
+    } catch {
+      return;
+    }
+    if (!doc) return;
+
+    const nextTitle = doc.title || DEFAULT_TITLE;
+    if (nextTitle !== lastTitle) {
+      lastTitle = nextTitle;
+      titleEl.textContent = nextTitle;
+    }
+
+    const innerIcon = doc.getElementById('favicon');
+    const nextIcon = innerIcon && innerIcon.getAttribute('href');
+    if (nextIcon && nextIcon !== lastIcon) {
+      lastIcon = nextIcon;
+      iconEl.setAttribute('href', nextIcon);
+    }
+  }
+
+  // Settings asks the outer document for its own source, so saving the SVG
+  // produces the complete portable site instead of rebuilding it in the app.
+  window.__GHOULISH_EXPORT_SVG__ = () => {
+    const clone = document.documentElement.cloneNode(true);
+    const frameClone = clone.querySelector('#app');
+    if (frameClone) {
+      frameClone.removeAttribute('srcdoc');
+      frameClone.removeAttribute('src');
+    }
+
+    const cloneTitle = clone.querySelector('#doc-title');
+    if (cloneTitle) cloneTitle.textContent = DEFAULT_TITLE;
+
+    const cloneIcon = clone.querySelector('#top-icon');
+    if (cloneIcon && DEFAULT_ICON) cloneIcon.setAttribute('href', DEFAULT_ICON);
+
+    const xml = new XMLSerializer().serializeToString(clone);
+    return `<?xml version="1.0" encoding="UTF-8"?>\n${xml}`;
+  };
+
+  // Opened from disk, browsers disable the Fullscreen API in the embedded
+  // document. Let the app ask this top-level SVG document for fullscreen
+  // instead; it has the same visual result and keeps Escape working.
+  window.__GHOULISH_TOP_FULLSCREEN__ = {
+    get enabled() {
+      return Boolean(document.fullscreenEnabled);
+    },
+    isActive() {
+      return Boolean(document.fullscreenElement);
+    },
+    enter() {
+      const root = document.documentElement;
+      if (!root || typeof root.requestFullscreen !== 'function') {
+        return Promise.reject(new Error('Fullscreen is unavailable'));
+      }
+      return root.requestFullscreen();
+    },
+    exit() {
+      if (!document.fullscreenElement) return Promise.resolve();
+      return document.exitFullscreen();
+    },
+  };
+
+  function notifyFullscreen() {
+    sync();
+    try {
+      const doc = iframe.contentDocument;
+      if (doc) {
+        doc.dispatchEvent(new doc.defaultView.Event('ghoulish:top-fullscreen-change'));
+      }
+    } catch {
+      // The app may still be loading.
+    }
+  }
+
+  let observer = null;
+
+  function observeApp() {
+    try {
+      const doc = iframe.contentDocument;
+      if (!doc || !doc.head) return;
+      if (observer) observer.disconnect();
+      observer = new MutationObserver(sync);
+      observer.observe(doc.head, {
+        childList: true,
+        subtree: true,
+        characterData: true,
+        attributes: true,
+        attributeFilter: ['href'],
+      });
+      sync();
+    } catch {
+      // Cross-origin embeds fall back to the interval below.
+    }
+  }
+
+  document.addEventListener('fullscreenchange', notifyFullscreen);
+  iframe.addEventListener('load', observeApp);
+  iframe.srcdoc = source.textContent;
+  setInterval(sync, 1000);
+})();
+  ]]></script>
+</svg>
